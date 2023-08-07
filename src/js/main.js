@@ -115,19 +115,23 @@ document.addEventListener('DOMContentLoaded', () => {
     let lastIndex = 10;
 
     // dummy Array;
-    let slicedData;
+    let pageData = brandsData;
+    let slicedData = [];
+    let filterSlicedData = [];
 
     // markup for brand list
     let brandMarkup = "";
 
-    // showing brand data function
-    const showData = () => {
-        slicedData = brandsData.slice(firstIndex, lastIndex);
-        slicedData.forEach((item, index) => {
-            brandMarkup += `<ul class="brands_container_list_item">
+    const displayData = (data) => {
+        console.log(data);
+        filterSlicedData = data.slice(firstIndex, lastIndex);
+        data.forEach((item, index) => {
+            brandMarkup += `<ul class="brands_container_list_item" data-year="${item.year}">
             <li>
              <img src="${item.src}" loading="lazy" width="100" height="45" alt="brand" />
              <span>${item.NMSID}</span>
+             <span>${item.year}</span>
+             <span>${item.id}</span>
            </li>
            <li>
              <h3 class="list_heading">${item.aprRate}</h3>
@@ -153,6 +157,43 @@ document.addEventListener('DOMContentLoaded', () => {
         getBrandListBox.innerHTML = brandMarkup;
     }
 
+    // showing brand data function
+    const showData = () => {
+        slicedData = pageData.slice(firstIndex, lastIndex);
+        slicedData.forEach((item, index) => {
+            brandMarkup += `<ul class="brands_container_list_item" data-year="${item.year}">
+            <li>
+             <img src="${item.src}" loading="lazy" width="100" height="45" alt="brand" />
+             <span>${item.NMSID}</span>
+             <span>${item.year}</span>
+             <span>${item.id}</span>
+           </li>
+           <li>
+             <h3 class="list_heading">${item.aprRate}</h3>
+             <span>${item.date}</span>
+           </li>
+           <li>
+             <h5 class="list_small_heading">${item.rate}</h5>
+             <span>${item.point}</span>
+             <span> ${item.lockRate}</span>
+           </li>
+           <li>
+             <h3 class="list_heading">${item.fees}</h3>
+             <span>${item.feespoint} </span>
+             <span> ${item.feesLock}</span>
+           </li>
+           <li>
+             <h5 class="list_small_heading">${item.toll}</h5>
+             <span>${item.tolldesc}</span>
+           </li>
+           <li><button class="btn_gray" id="brand_next" data-item="${index}">Next</button></li>
+         </ul>`
+        });
+        getBrandListBox.innerHTML = brandMarkup;
+        // displayData(slicedData);
+    }
+
+    // button diable/enable function
     const updateButtonState = () => {
         // add disable class to next button
         if (lastIndex == 40) {
@@ -168,7 +209,6 @@ document.addEventListener('DOMContentLoaded', () => {
             getPrevBtn.classList.remove('disable');
         }
     }
-
     // brands next button 
     getBrandListBox.addEventListener('click', (e) => {
         e.stopPropagation();
@@ -185,16 +225,14 @@ document.addEventListener('DOMContentLoaded', () => {
         if (firstIndex == 0 && lastIndex == 10) {
             firstIndex = 10;
             lastIndex = 20;
-
         } else if (firstIndex == 10 && lastIndex == 20) {
             firstIndex = 20;
             lastIndex = 30;
-
         } else if (firstIndex == 20 && lastIndex == 30) {
             firstIndex = 30;
             lastIndex = 40;
         }
-        slicedData = "";
+        slicedData = [];
         brandMarkup = '';
         updateButtonState();
         showData();
@@ -212,18 +250,20 @@ document.addEventListener('DOMContentLoaded', () => {
             firstIndex = 10;
             lastIndex = 20;
         }
-        slicedData = "";
+        slicedData = [];
         brandMarkup = '';
         updateButtonState();
         showData();
     })
 
+    // filter result
     filterResBtn.addEventListener('click', () => {
-     
-
-
+        slicedData = [];
+        brandMarkup = "";
+        let filterData = pageData.filter((item) => item.year == getFilterText.innerText);
+        console.log(filterData);
+        displayData(filterData);
     })
-
 
     // load local file to display
     const loadFileList = () => {
@@ -263,6 +303,20 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     })
 
+    // range slider 
+    const monthRange = document.getElementById('months');
+    const pointsRange = document.getElementById('points');
+    const fairMonthRange = document.getElementById('fair_range_month');
+    const fairPointRange = document.getElementById('fair_calc_points');
+    const currentTime = document.getElementById('current_time');
+
+    pointsRange.oninput = function () {
+        fairPointRange.innerText = this.value;
+    }
+    monthRange.oninput = function () {
+        fairMonthRange.innerText = monthRange.value;
+    }
+
     // if window is reload passlocal storage files to file array
     window.onload = () => {
         //  get from localStorage
@@ -270,6 +324,8 @@ document.addEventListener('DOMContentLoaded', () => {
         if (LocalStorageFiles !== null) {
             files = LocalStorageFiles
         }
+        fairMonthRange.innerText = 2000;
+        fairPointRange.innerText = 2200;
     }
 
     const convertBase64 = (file) => {
@@ -356,6 +412,75 @@ document.addEventListener('DOMContentLoaded', () => {
     getFile.addEventListener('change', (e) => {
         uploadFile(e);
     })
+
+    // filter checkbox 
+    // const get30Years = document.getElementById('30years');
+    // const get20Years = document.getElementById('20years');
+    // const get15Years = document.getElementById('15years');
+    // const getRateTen = document.getElementById('reteten');
+    // const getRateSeven = document.getElementById('rateseven');
+    // const getRateFive = document.getElementById('ratefive');
+
+    // const minyear = document.getElementById('minyear');
+    // const mediumyear = document.getElementById('minyear');
+    // const longYear = document.getElementById('longyear');
+    // const tenPercent = document.getElementById('tenpercent');
+    // const sevenPercent = document.getElementById('sevenpercent');
+    // const fivePercent = document.getElementById('fivepercent');
+
+    // console.log(minyear);
+    // // const getRateItems = document.querySelectorAll('.rates_table_list_item')
+    // // get all checkbox
+    // const getAllRateCheckBox = document.querySelectorAll('.rate_checkbox input[type="checkbox"]');
+
+    // add checkbox set active
+    // getAllRateCheckBox.forEach((item) => {
+    //     item.addEventListener('change', (e) => {
+
+    //         if (get15Years.checked) {
+    //             console.log(minyear);
+    //             minyear.classList.remove('hide');
+    //         } else {
+    //             minyear.classList.add('hide');
+    //         }
+
+    //         if (get20Years.checked) {
+    //             mediumyear.classList.remove('hide');
+    //         } else {
+    //             mediumyear.classList.add('hide');
+    //         }
+
+    //         if (get30Years.checked) {
+    //             longYear.classList.remove('hide');
+    //         } else {
+    //             longYear.classList.add('hide');
+    //         }
+    //         if (getRateTen.checked) {
+    //             tenPercent.classList.remove('hide');
+    //         } else {
+    //             tenPercent.classList.add('hide');
+    //         }
+    //         if (getRateSeven.checked) {
+    //             sevenPercent.classList.remove('hide');
+    //         } else {
+    //             sevenPercent.classList.add('hide');
+    //         }
+    //         if (getRateFive.checked) {
+    //             fivePercent.classList.remove('hide');
+    //         } else {
+    //             fivePercent.classList.add('hide');
+    //         }
+    //         // let parentElement = item.parentElement;
+    //         // if (e.target.checked) {
+    //         //     parentElement.classList.add('active');
+    //         // } else {
+    //         //     parentElement.classList.remove('active');
+    //         // }
+    //     })
+    // });
+
+
+
 
     // load section every refresh
     const loadSection = () => {
@@ -456,6 +581,9 @@ document.addEventListener('DOMContentLoaded', () => {
             getRateSection.classList.remove('hide');
             getStepsSection.classList.add('hide');
             getApplySection.classList.add('hide');
+
+            var time = new Date();
+            currentTime.innerText = "Rates and fees as of" + " " + time.toLocaleString('en-US', { hour: 'numeric', minute: 'numeric', hour12: true })
         } else if (currentStatus == 6) {
             userSection.classList.add('hide');
             personalSection.classList.add('hide');
@@ -488,14 +616,20 @@ document.addEventListener('DOMContentLoaded', () => {
         getDocumentPhotoWrap.classList.remove('hide');
         getDocumentAddressWrap.style.display = "none";
         getDocumentButtonSet.style.display = "flex";
+        getDocumentPhotoBtn.classList.add('active');
+        getDocumentAddressBtn.classList.remove('active');
     })
     getDocumentAddressBtn.addEventListener('click', (e) => {
         e.preventDefault();
+        getFileErr.innerText = "";
+        getFileErr.classList.remove('active');
         getDocumentPhotoWrap.classList.add('hide');
         getDocumentAddressWrap.style.display = "flex";
         getDocumentAddressWrap.style.alignItems = "center";
         getDocumentAddressWrap.style.justifyContent = "center";
         getDocumentButtonSet.style.display = "none";
+        getDocumentPhotoBtn.classList.remove('active');
+        getDocumentAddressBtn.classList.add('active');
     })
 
     // back load Section refill the datas

@@ -16,19 +16,34 @@
       .card {
         width: 50%;
         @include flexbox(space-between, center);
-        margin-right: 30px;
+        gap: 14px;
+        margin-right: 10px;
         &:last-child {
           box-shadow: none;
           margin-right: 0px;
           border: 2px dashed $muted-1000;
         }
         &_shape {
-            width: 60%;
+          width: 110px;
+          height: 110px;
+          border: 8px solid $muted-light;
+          position: relative;
+          border-radius: 50%;
+          &_text {
+            @extend %pie-text;
           }
+          &_outline {
+            @extend %pie-outline;
+            left: -8px;
+            width: 110px;
+            height: 110px;
+          }
+        }
         &_detail {
+          max-width: 290px;
           font-family: OpenSans;
           &_heading {
-            text-transform:capitalize;
+            text-transform: capitalize;
             font-size: $md-1000 + 4;
           }
           &_desc {
@@ -36,10 +51,10 @@
             font-size: $sm-500;
             line-height: 1.3;
           }
-          .btn_primary{
+          .btn_primary {
             padding: 12px 2px;
           }
-          .btn_muted{
+          .btn_muted {
             background-color: transparent;
             border: 2px solid $muted-1000;
             color: $muted-1000;
