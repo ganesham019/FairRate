@@ -1,0 +1,9 @@
+@use "../abstracts" as *;
+
+.content {
+  position: relative;
+  top: 69px;
+  background-color: $palegray;
+  width: 100%;
+  height: 100%;
+}

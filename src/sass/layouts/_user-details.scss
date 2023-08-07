@@ -1,0 +1,45 @@
+@use "../abstracts" as *;
+
+.user_detail {
+  text-align: center;
+  min-height: 500px;
+  padding: 60px 0px;
+
+  &_heading {
+    font-family: OpenSans-SemiBold;
+    font-size: $xl;
+    color: $dark;
+    line-height: 1.2;
+    max-width: 530px;
+    margin: 0px auto 60px auto;
+    text-align: center;
+  }
+  &_inputs {
+    @include flexbox(center, center);
+    .input_box {
+      @include flexbox(flex-start, center);
+      flex-direction: column;
+      min-height: 72px;
+      &:first-child {
+        margin-right: 20px;
+      }
+      input {
+        @extend %font-basic;
+        color: $dark-light;
+        min-width: 250px;
+        padding: 12px 20px;
+        @extend %border-basic;
+        &:focus {
+          border: 2px solid $primary;
+          outline: 1px solid $primary;
+        }
+      }
+    }
+  }
+  .btn_primary {
+    font-family: OpenSans;
+    font-size: $sm-500;
+    min-width: 150px;
+    cursor: pointer;
+  }
+}

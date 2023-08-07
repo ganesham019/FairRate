@@ -1,0 +1,22 @@
+// import base
+@use 'base';
+
+//import common style
+@use 'themes/common';
+
+// import components
+@use 'components';
+
+
+// import layouts
+@use "layouts/header";
+@use "layouts/body";
+@use 'layouts/personal-details';
+@use 'layouts/user-details';
+@use 'layouts/document-details';
+@use 'layouts/brands';
+@use 'layouts/fair-rates';
+@use 'layouts/profile-steps';
+@use 'layouts/applications';
+@use "layouts/footer";
+

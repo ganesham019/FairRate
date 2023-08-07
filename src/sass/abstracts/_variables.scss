@@ -1,0 +1,62 @@
+$light: #adadad;
+$dark: #212b36;
+$dark-500: #47495a;
+$dark-light: #454f5b;
+$primary: #23c0f5;
+$muted-dark: #637381;
+$muted: #919eab;
+$muted-500: #e7e7e7;
+$muted-1000: #c4cdd5;
+$muted-light: #63738133;
+$lightgray: #f3f3f3;
+$palegray: #f9fafb;
+$pale-light: #ecedf0;
+$pale-light-500: #dfe3e8;
+$plategray: #f4f6f8;
+$white: #ffffff;
+$danger: rgb(210, 24, 24);
+$green:rgb(27, 179, 27);
+
+// fairresult variable
+$lexona: #00cfc0;
+$cerulean: #007ace;
+$iris: #5c6ac4;
+$purple: #9c6ade;
+$pink: #de6a93;
+
+// font sizes
+$xs: 12px;
+$sm: 14px;
+$sm-500: 16px;
+$md: 18px;
+$md-500: 20px;
+$md-1000: 22px;
+$xl: 38px;
+
+// margin base
+$margin-base: 10px;
+
+$util: (
+  "margin-bottom": (
+    "prefix": mb,
+    "values": (
+      1: $margin-base,
+      2: $margin-base * 2,
+      3: $margin-base * 3,
+      4: $margin-base * 4,
+      5: $margin-base * 5,
+      10: $margin-base * 10,
+    ),
+  ),
+);
+
+// create a utility class
+@each $prop, $map in $util {
+  $prefix: map-get($map, "prefix");
+  $values: map-get($map, "values");
+  @each $k, $v in $values {
+    .#{$prefix}-#{$k} {
+      #{$prop}: $v;
+    }
+  }
+}

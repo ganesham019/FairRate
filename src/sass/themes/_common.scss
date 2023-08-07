@@ -1,0 +1,42 @@
+@use "../abstracts" as *;
+
+.flatpickr-calendar {
+  &.open {
+    z-index: 5 !important;
+  }
+}
+small {
+  width: 100%;
+  display: inline-block;
+  font-family: OpenSans;
+  font-size: $xs;
+  text-align: left;
+  color: $danger;
+  margin-block: 3px;
+  height: 16px;
+}
+
+.bg-lexona{
+  background-color: $lexona;
+}
+.bg-primary{
+  background-color: $primary;
+}
+.bg-cerulean{
+  background-color: $cerulean;
+}
+.bg-iris{
+  background-color: $iris;
+}
+.bg-purple{
+  background-color: $purple;
+}
+.bg-pink{
+  background-color: $pink;
+}
+
+.round_bg_shape {
+  margin-inline: 2px;
+  padding: 3px 10px;
+  border-radius: 14px;
+}

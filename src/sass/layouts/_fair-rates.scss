@@ -1,0 +1,157 @@
+@use "../abstracts" as *;
+.rates {
+  position: relative;
+  height: 650px;
+  &_heading {
+    padding-top: 30px;
+    text-align: center;
+    @extend %heading;
+    min-width: 100%;
+  }
+  &_wrap {
+    @include flexbox;
+    min-height: 350px;
+    .rates_table {
+      width: 75%;
+      margin-right: 30px;
+      border-radius: 5px;
+      background: $white;
+      padding: 14px 14px 2px;
+      box-shadow: 0 2px 1px -1px rgba(0, 0, 0, 0.12),
+        0 1px 1px 0 rgba(0, 0, 0, 0.14);
+
+      &_header {
+        @extend %font-basic;
+        font-size: $xs - 2;
+        padding: 12px 5px;
+        border-bottom: 2px solid $muted-1000;
+        @include flexbox;
+        li {
+          width: calc(100% / 4);
+          &:nth-last-child(-n + 2) {
+            text-align: center;
+          }
+        }
+      }
+      .rates_table_list {
+        &_item {
+          font-family: OpenSans;
+          font-size: $xs - 2;
+          padding: 14px 5px;
+          border-bottom: 2px solid $muted-1000;
+          @include flexbox(space-between, center);
+          &:last-child {
+            border-bottom: none;
+          }
+          .range_lexona {
+            &::before {
+              width: 70%;
+              background-color: $lexona;
+            }
+          }
+          .range_primary {
+            &::before {
+              width: 40%;
+              background-color: $primary;
+            }
+          }
+          .range_cerulean {
+            &::before {
+              width: 80%;
+              background-color: $cerulean;
+            }
+          }
+
+          .range_iris {
+            &::before {
+              width: 60%;
+              background-color: $iris;
+            }
+          }
+          .range_purple {
+            &::before {
+              width: 80%;
+              background-color: $purple;
+            }
+          }
+          .range_pink {
+            &::before {
+              width: 90%;
+              background-color: $pink;
+            }
+          }
+          li {
+            width: calc(100% / 4);
+            .bar {
+              position: relative;
+              width: 50%;
+              height: 5px;
+              background-color: $muted-light;
+              border-radius: 5px;
+              &::before {
+                content: "";
+                position: absolute;
+                left: 0px;
+                top: 0px;
+                height: 5px;
+                border-radius: 5px;
+              }
+            }
+            &:nth-last-child(-n + 2) {
+              @include flexbox(center, center);
+              font-family: OpenSans-light;
+              font-size: $sm-500;
+              font-weight: normal;
+              text-align: center;
+            }
+            &:nth-child(2) {
+              font-family: OpenSans-light;
+              font-size: $sm-500;
+              font-weight: normal;
+              span {
+                margin-inline: 5px;
+                color: $muted-1000;
+              }
+            }
+            h4 {
+              width: 50%;
+              margin-right: 5px;
+            }
+            p {
+              color: $white;
+              padding: 5px 10px;
+              display: inline-block;
+            }
+            span {
+              display: inline-block;
+              &.status {
+                margin-inline: 5px;
+                padding: 5px 10px;
+                border-radius: 14px;
+                background-color: $pale-light;
+              }
+            }
+          }
+        }
+      }
+    }
+    &_filter {
+      width: 25%;
+      background: $white;
+      border-radius: 5px;
+      box-shadow: 0 2px 1px -1px rgba(0, 0, 0, 0.12),
+        0 1px 1px 0 rgba(0, 0, 0, 0.14);
+    }
+  }
+  .btn_set{
+        text-align: center;
+        width: 100%;
+    .btn_primary {
+        font-family: OpenSans;
+        min-width: 135px;
+        padding: 10px;
+        margin: auto;
+      }
+  }
+ 
+}

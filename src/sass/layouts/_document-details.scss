@@ -1,0 +1,207 @@
+@use "../abstracts" as *;
+
+.document {
+  position: relative;
+  height: 1080px;
+  // height: 100%;
+  &_wrap {
+    height: 100%;
+    &_heading {
+      @extend %heading;
+      padding-top: 45px;
+      color: $dark-500;
+      max-width: 60%;
+      margin-inline: auto;
+      text-align: center;
+    }
+    &_menus {
+      @include flexbox(center, center);
+      .btn_gray {
+        font-family: OpenSans;
+        font-size: $sm-500;
+        width: 100%;
+        max-width: 300px;
+        border-radius: 0px;
+        cursor: pointer;
+        &:hover {
+          outline: 1px solid $white;
+          transition: all 0.1s ease-out;
+        }
+      }
+    }
+    &_upload {
+      width: 60%;
+      min-height: 400px;
+      margin-inline: auto;
+      box-shadow: 0 3px 4px rgba(93, 93, 93, 0.16),
+        0 2px 4px rgba(81, 77, 77, 0.23);
+      &.address_upload {
+        .cmg_soon{
+          @extend %heading;
+        }
+      }
+      &_heading {
+        width: 100%;
+        padding: 26px 0px;
+        text-align: center;
+        border-bottom: 1px solid $muted-500;
+        @extend %font-basic;
+        color: $dark;
+      }
+      &_subhead {
+        width: 100%;
+        @extend %font-basic;
+        font-size: $xs;
+        color: $dark;
+        padding-inline: 20px;
+      }
+      .file_upload {
+        width: 100%;
+        @include flexbox(space-between, flex-start);
+        padding: 32px 12px 5px;
+        &_left {
+          width: 60%;
+          margin-right: 30px;
+          &_drag {
+            position: relative;
+            padding: 20px 0px;
+            border-radius: 12px;
+            background-color: $plategray;
+            @include flexbox(center, center);
+            flex-direction: column;
+            border: 1px dashed $muted;
+            svg {
+              margin-bottom: 30px;
+            }
+            .file_text {
+              width: 60%;
+              text-align: center;
+              @extend %font-basic;
+              line-height: 1.4;
+              span {
+                color: $primary;
+                border-bottom: 1px solid $primary;
+              }
+            }
+            .file_format {
+              margin-top: 30px;
+              @extend %font-basic;
+              font-size: $xs;
+              color: $muted;
+              text-align: left;
+              width: 80%;
+            }
+            .hide_file {
+              position: absolute;
+              z-index: 10;
+              opacity: 0;
+              cursor: pointer;
+              height: 100%;
+              width: 100%;
+            }
+          }
+        }
+        &_right {
+          width: 40%;
+          @include flexbox;
+          flex-direction: column;
+          > li {
+            list-style-type: disc;
+            @extend %font-basic;
+            font-size: $sm;
+            margin-bottom: 14px;
+            text-transform: capitalize;
+            &:first-child {
+              margin-bottom: 20px;
+              font-size: $xs;
+              list-style: none;
+              text-transform: uppercase;
+            }
+            &:nth-child(3) {
+              list-style: none;
+            }
+            &:last-child {
+              margin-top: 20px;
+              list-style: none;
+            }
+            > ul {
+              width: 70%;
+              margin-inline: auto;
+              li {
+                list-style-type: disc;
+                @extend %font-basic;
+                font-size: $xs;
+                margin-bottom: 14px;
+              }
+            }
+          }
+        }
+      }
+      .file_table {
+        width: 100%;
+        height: 150px;
+        overflow-y: scroll;
+        &::-webkit-scrollbar {
+          display: none;
+        }
+        &_list {
+          @include flexbox(center, center);
+          padding: 7px;
+          background-color: $plategray;
+          border-bottom: 1px solid $muted-light;
+          li {
+            align-self: center;
+            padding: 5px;
+            width: calc(100% / 5);
+            @extend %font-basic;
+            font-size: $xs;
+            color: $muted-dark;
+            text-transform: capitalize;
+            text-align: center;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            img {
+              width: 24px;
+              height: auto;
+            }
+            .btn_danger {
+              background-color: $danger;
+              min-width: 50px;
+              padding: 6px;
+              cursor: pointer;
+              border: none;
+              font-size: $xs;
+              color: $white;
+              @extend %border-basic;
+            }
+          }
+        }
+      }
+      small {
+        height: 26px;
+        &.active {
+          height: 26px;
+          @include flexbox(center, center);
+          background-color: $danger;
+          color: $white;
+          text-align: center;
+        }
+      }
+    }
+  }
+  &_button_set {
+    @include flexbox(space-between, center);
+    width: 60%;
+    margin-inline: auto;
+    .btn_muted {
+      font-family: OpenSans;
+      font-size: $sm-500;
+      width: 200px;
+      cursor: pointer;
+    }
+    .btn_primary {
+      @extend .btn_muted;
+    }
+  }
+}

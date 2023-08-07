@@ -1,0 +1,195 @@
+@use "../abstracts" as *;
+
+.personal {
+  padding: 20px;
+  text-align: left;
+  min-height: 1100px;
+  &_wrap {
+    margin-top: 36px;
+    @include flexbox(space-between, flex-start);
+    width: 100%;
+    &_left {
+      width: 40%;
+      margin-right: 20px;
+      &_heading {
+@extend %heading;
+      }
+      &_desc {
+        @extend %font-basic;
+        line-height: 1.3;
+      }
+      .date_sec {
+        @include flexbox(flex-start, flex-start);
+        flex-direction: column;
+        label {
+          @extend %font-basic;
+        }
+      }
+    }
+    &_right {
+      width: 40%;
+      position: relative;
+      .personal_wrap_box {
+        @include flexbox(flex-start, center);
+        flex-direction: column;
+      }
+    }
+    .input_set {
+      position: relative;
+      padding: 8px;
+      width: 100%;
+      background-color: $white;
+      @extend %border-basic;
+      border: 2px solid $muted-1000;
+      @include flexbox(space-between, center);
+      &.text_set {
+        &:focus-within {
+            border: 2px solid $primary;
+          }
+      }
+      svg {
+        margin-inline: 10px;
+        width: 40px;
+        height: 20px;
+        path {
+          fill: $dark;
+        }
+      }
+      &.active {
+        border: 2px solid $primary;
+      }
+      label {
+        width: 100%;
+        @extend %font-basic;
+      }
+
+      input {
+        padding: 4px;
+        width: 100%;
+        @extend %font-basic;
+        font-size: $sm;
+        &:focus {
+          border: none;
+          outline: none;
+        }
+        &::placeholder {
+          /* Chrome, Firefox, Opera, Safari 10.1+ */
+          color: $muted;
+          opacity: 1; /* Firefox */
+        }
+        &::-webkit-inner-spin-button,
+        &::-webkit-calendar-picker-indicator {
+          display: none;
+          -webkit-appearance: none;
+        }
+      }
+      select {
+        @extend %font-basic;
+        width: 100%;
+        &:focus {
+          outline: none;
+        }
+      }
+    }
+    .checkbox {
+      position: absolute;
+      opacity: 0;
+      @include flexbox(center, center);
+      // Text
+      & + label {
+        cursor: pointer;
+        position: relative;
+        height: 26px;
+        padding-left: 46px;
+        text-transform: capitalize;
+        @include flexbox(flex-start, center);
+        @extend %font-basic; // Label colour
+        // Checkbox
+        &:before {
+          content: "";
+          position: absolute;
+          left: 10px;
+          top: 0;
+          width: 24px;
+          height: 24px;
+          @extend %border-basic;
+          background: transparent;
+          transition: all 0.4s ease-out;
+        }
+
+        // Tick
+        &:after {
+          content: "";
+          position: absolute;
+          top: 4px;
+          left: 20px;
+          width: 6px;
+          height: 12px;
+          border-right: 2px solid transparent;
+          border-bottom: 2px solid transparent;
+          transform: rotate(45deg);
+          transition: all 0.4s ease-out;
+        }
+      }
+      // Focus
+      & + label:focus {
+        outline: none;
+      }
+
+      // Checked
+      &:checked {
+        & + label {
+          &:before {
+            background: $white;
+            border: 2px solid $primary;
+          }
+          &:after {
+            border-color: $primary;
+          }
+        }
+      }
+    }
+    .submit_button_set {
+      @include flexbox(space-between, center);
+      .btn_primary {
+        font-family: OpenSans;
+        font-size: $sm-500;
+        width: 48%;
+        cursor: pointer;
+      }
+      .btn_muted {
+        @extend .btn_primary;
+      }
+    }
+    .alarm {
+      @include flexbox(space-between, center);
+      .alarm_box {
+        width: 48%;
+        padding: 16px 5px;
+        @extend %border-basic;
+        text-align: center;
+        svg {
+          width: 50px;
+          height: 50px;
+          path {
+            fill: $dark-500;
+          }
+        }
+        &.active {
+          border: 2px solid $primary;
+          svg{
+            path{
+                fill: $primary;
+            }
+          }
+        }
+        .input_set {
+          border: none;
+          outline: none;
+          box-shadow: none;
+          background: transparent;
+        }
+      }
+    }
+  }
+}

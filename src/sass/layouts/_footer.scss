@@ -1,0 +1,67 @@
+@use "../abstracts" as *;
+
+.footer {
+  position: relative;
+  width: 100%;
+  background-color: $plategray;
+  @include flexbox(center, center);
+  &_wrapper {
+  height: 100%;
+  padding: 60px 14px;
+    @include flexbox(flex-start, flex-start);
+    li {
+      min-width: 160px;
+      &:nth-child(-n + 3) {
+        margin-right: 14px;
+      }
+      &:nth-child(3) {
+        min-width: 220px;
+      }
+    }
+  }
+  &_social {
+    font-family: OpenSans;
+    color: $muted;
+    @include flexbox(flex-start, flex-start);
+    flex-direction: column;
+    &_text {
+      &:nth-child(2) {
+        a {
+          color: $primary;
+          font-size: $sm;
+        }
+      }
+      a {
+        text-decoration: none;
+        font-size: $md;
+        color: $dark-light;
+      }
+      &:last-child {
+        font-size: $xs;
+        margin-top: 45px;
+      }
+    }
+  }
+  &_menus {
+    font-family: OpenSans;
+    h3 {
+      color: $muted;
+      margin-bottom: 20px;
+      text-transform: uppercase;
+    }
+    p {
+      color: $dark-light;
+      font-size: $sm;
+      margin-bottom: 14px;
+    }
+  }
+  &_des {
+    max-width: 360px;
+    &_text {
+      font-size: $sm;
+      color: $dark-500;
+      font-family: OpenSans;
+      line-height: 1.6;
+    }
+  }
+}
