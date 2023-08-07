@@ -7,9 +7,15 @@
     @include flexbox(flex-start, center);
     padding: 20px;
     border-bottom: 1.3px solid $muted-1000;
-    &_shape {
-      width: 200px;
-      height: 100px;
+    gap: 20px;
+    &_pie {
+      @extend %pie_shape;
+      &_text {
+        @extend %pie-text;
+      }
+      &_outline {
+        @extend %pie-outline;
+      }
     }
     &_details {
       width: 60%;

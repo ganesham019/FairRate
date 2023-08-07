@@ -210,15 +210,15 @@
             </div>
             <div class="input_set checkbox_set mb-1">
               <input class="checkbox" type="checkbox" name="rent" id="rent" />
-              <label for="rent" tabindex="1">Rent</label>
+              <label for="rent">Rent</label>
             </div>
             <div class="input_set checkbox_set mb-1">
               <input class="checkbox" type="checkbox" name="sale" id="sale" />
-              <label for="sale" tabindex="2">Sale</label>
+              <label for="sale">Sale</label>
             </div>
             <div class="input_set checkbox_set mb-1">
               <input class="checkbox" type="checkbox" name="house" id="house" />
-              <label for="house" tabindex="3">House</label>
+              <label for="house">House</label>
             </div>
             <small class="mb-1" id="categoryErr"></small>
             <small class="mb-1" id="selectMenuErr"></small>
@@ -296,7 +296,7 @@
             Few more step ahead upload your ID Document 👆
           </h2>
           <div class="document_wrap_menus mb-4">
-            <button class="btn_gray" id="doc_photo_sec">
+            <button class="btn_gray active" id="doc_photo_sec">
               Photo Identification
             </button>
             <button class="btn_gray" id="doc_address_sec">
@@ -384,7 +384,7 @@
                 <li class="filter_option">30 Years</li>
               </ul>
             </div>
-            <div class="filter_menu">
+            <!-- <div class="filter_menu">
               <div class="filter_menu_btn" id="select_filter_btn">
                 <p class="select_option" id="filter_text">Select Option</p>
                 <span class="down_arrow" id="down_arrow"></span>
@@ -394,41 +394,37 @@
                 <li class="filter_option">30 Years</li>
                 <li class="filter_option">20 Years</li>
               </ul>
-            </div>
+            </div> -->
             <button class="btn_filter" id="filter_btn">
               Filter Results
             </button>
             <div class="pagination">
-              <button class="prev" id="prev"><svg version="1.0" xmlns="http://www.w3.org/2000/svg"
-                width="20.000000pt" height="20.000000pt" viewBox="0 0 128.000000 128.000000"
-                preserveAspectRatio="xMidYMid meet">
-               
-               <g transform="translate(0.000000,128.000000) scale(0.100000,-0.100000)"
-               fill="#000000" stroke="none">
-               <path d="M258 932 c-237 -237 -258 -260 -258 -292 0 -31 21 -55 252 -287 169
+              <button class="prev" id="prev"><svg version="1.0" xmlns="http://www.w3.org/2000/svg" width="20.000000pt"
+                  height="20.000000pt" viewBox="0 0 128.000000 128.000000" preserveAspectRatio="xMidYMid meet">
+
+                  <g transform="translate(0.000000,128.000000) scale(0.100000,-0.100000)" fill="#000000" stroke="none">
+                    <path d="M258 932 c-237 -237 -258 -260 -258 -292 0 -31 21 -55 252 -287 169
                -169 261 -254 279 -258 59 -13 117 45 104 105 -6 25 -271 298 -325 334 -23 15
                7 16 444 16 l468 0 29 29 c39 40 39 82 0 122 l-29 29 -469 0 c-343 1 -463 4
                -448 11 43 24 324 313 330 340 12 55 -36 109 -98 109 -15 0 -101 -80 -279
-               -258z"/>
-               </g>
-               </svg>
-               </button>
-              <button class="prev" id="next"><svg version="1.0" xmlns="http://www.w3.org/2000/svg"
-                width="20.000000pt" height="20.000000pt" viewBox="0 0 128.000000 128.000000"
-                preserveAspectRatio="xMidYMid meet">
-               
-               <g transform="translate(0.000000,128.000000) scale(0.100000,-0.100000)"
-               fill="#000000" stroke="none">
-               <path d="M679 1131 c-30 -29 -39 -47 -39 -72 0 -28 17 -50 142 -176 l142 -143
+               -258z" />
+                  </g>
+                </svg>
+              </button>
+              <button class="prev" id="next"><svg version="1.0" xmlns="http://www.w3.org/2000/svg" width="20.000000pt"
+                  height="20.000000pt" viewBox="0 0 128.000000 128.000000" preserveAspectRatio="xMidYMid meet">
+
+                  <g transform="translate(0.000000,128.000000) scale(0.100000,-0.100000)" fill="#000000" stroke="none">
+                    <path d="M679 1131 c-30 -29 -39 -47 -39 -72 0 -28 17 -50 142 -176 l142 -143
                -440 0 -441 0 -21 -23 c-33 -35 -31 -119 3 -152 l24 -25 438 0 437 0 -142
                -143 c-125 -126 -142 -148 -142 -176 0 -25 9 -43 39 -72 69 -69 63 -72 349
-               214 190 190 252 259 252 277 0 18 -62 87 -252 277 -286 286 -280 283 -349 214z"/>
-               </g>
-               </svg>
-               </button>
+               214 190 190 252 259 252 277 0 18 -62 87 -252 277 -286 286 -280 283 -349 214z" />
+                  </g>
+                </svg>
+              </button>
             </div>
           </section>
-          
+
           <ul class="brands_container_header">
             <li>Lender</li>
             <li>APR</li>
@@ -453,7 +449,7 @@
               <li>PER MONTH</li>
             </ul>
             <div class="rates_table_list">
-              <ul class="rates_table_list_item">
+              <ul class="rates_table_list_item hide" id="minyear" data-id="15years">
                 <li>
                   <p class="round_bg_shape bg-lexona">15 years</p>
                   <span class="status">Fixed</d>
@@ -466,7 +462,7 @@
                   <h4>$3,120</h4> <span class="bar range_lexona"></span>
                 </li>
               </ul>
-              <ul class="rates_table_list_item">
+              <ul class="rates_table_list_item hide" id="mediumyear" data-id="20years">
                 <li>
                   <p class="round_bg_shape bg-primary">20 years</p>
                   <span class="status">Fixed</d>
@@ -479,7 +475,7 @@
                   <h4>$3,120</h4> <span class="bar range_primary"></span>
                 </li>
               </ul>
-              <ul class="rates_table_list_item">
+              <ul class="rates_table_list_item hide" id="longyear" data-id="30years">
                 <li>
                   <p class="round_bg_shape bg-cerulean">30 years</p>
                   <span class="status">Fixed</d>
@@ -492,7 +488,7 @@
                   <h4>$3,120</h4> <span class="bar range_cerulean"></span>
                 </li>
               </ul>
-              <ul class="rates_table_list_item">
+              <ul class="rates_table_list_item hide" id="tenpercent" data-id="rateten">
                 <li>
                   <p class="round_bg_shape bg-iris">10/1</p>
                   <span class="status">Adjustable</d>
@@ -505,7 +501,7 @@
                   <h4>$3,120</h4> <span class="bar range_iris"></span>
                 </li>
               </ul>
-              <ul class="rates_table_list_item">
+              <ul class="rates_table_list_item hide" id="sevenpercent" data-id="rateseven">
                 <li>
                   <p class="round_bg_shape bg-purple">7/1</p>
                   <span class="status">Adjustable</d>
@@ -518,7 +514,7 @@
                   <h4>$3,120</h4> <span class="bar range_purple"></span>
                 </li>
               </ul>
-              <ul class="rates_table_list_item">
+              <ul class="rates_table_list_item hide" id="fivepercent" data-id="ratefive">
                 <li>
                   <p class="round_bg_shape bg-pink">5/1</p>
                   <span class="status">Adjustable</d>
@@ -533,19 +529,79 @@
               </ul>
             </div>
           </div>
-          <div class="rates_wrap_filter"></div>
+          <div class="rates_wrap_filter">
+            <!-- <div class="rates_wrap_filter_boxes">
+              <div class="input_set checkbox_set mb-1">
+                <input class="checkbox" type="checkbox" name="fixed" id="fixed" />
+                <label for="fixed">Fixed</label>
+              </div>
+              <div class="input_set checkbox_set mb-1">
+                <input class="checkbox" type="checkbox" name="adjustable" id="adjustable" />
+                <label for="adjustable">Adjustable</label>
+              </div>
+            </div> -->
+            <div class="checkbox_rates">
+              <ul class="checkbox_rates_box">
+                <li class="input_set rate_checkbox mb-1">
+                  <input class="checkbox" type="checkbox" name="30years" id="30years" checked />
+                  <label for="30years">30 Years</label>
+                </li>
+                <li class="input_set rate_checkbox mb-1">
+                  <input class="checkbox" type="checkbox" name="20years" id="20years" checked />
+                  <label for="20years">20 Years</label>
+                </li>
+                <li class="input_set rate_checkbox mb-1">
+                  <input class="checkbox" type="checkbox" name="15years" id="15years" checked />
+                  <label for="15years">15 Years</label>
+                </li>
+              </ul>
+              <ul class="checkbox_rates_box">
+                <li class="input_set rate_checkbox mb-1">
+                  <input class="checkbox" type="checkbox" name="reteten" id="reteten" checked />
+                  <label for="reteten">10/1</label>
+                </li>
+                <li class="input_set rate_checkbox mb-1">
+                  <input class="checkbox" type="checkbox" name="rateseven" id="rateseven" checked />
+                  <label for="rateseven">7/1</label>
+                </li>
+                <li class="input_set rate_checkbox mb-1">
+                  <input class="checkbox" type="checkbox" name="ratefive" id="ratefive" checked />
+                  <label for="ratefive">5/1</label>
+                </li>
+              </ul>
+            </div>
+            <div class="fair_range">
+              <div class="fair_range_wrap">
+                <label for="months">Max per month:</label>
+                <div class="fair_calc">
+                  <input type="range" id="months" name="months" min="2200" max="3500" value="2800">
+                  <p class="fair_range_month" id="fair_range_month"></p>
+                </div>
+              </div>
+              <div class="fair_range_wrap">
+                <label for="points">Max points/credit :</label>
+                <div class="fair_calc">
+                  <input type="range" id="points" name="points" min="3000" max="3500" value="3000">
+                  <p class="fair_calc_points" id="fair_calc_points"></p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
 
         <div class="btn_set">
+          <p class="time" id="current_time"></p>
           <button class="btn_primary" id="rate_next">Next</button>
-
         </div>
       </section>
 
       <!-- steps -->
       <section class="steps page hide" id="steps">
         <div class="steps_res mb-5">
-          <div class="steps_res_shape"></div>
+          <div class="steps_res_pie">
+            <div class="steps_res_pie_text">60%</div>
+            <div class="steps_res_pie_outline"></div>
+          </div>
           <div class="steps_res_details">
             <h2 class="steps_res_details_heading mb-1">
               Your Mortgage is 60% Complete
@@ -605,7 +661,10 @@
           <h3 class="application_wrap_heading mb-5" id="volunteer"></h3>
           <div class="application_wrap_list">
             <div class="card">
-              <div class="card_shape"></div>
+              <div class="card_shape">
+                <div class="card_shape_text">60%</div>
+                <div class="card_shape_outline"></div>
+              </div>
               <div class="card_detail">
                 <h3 class="card_detail_heading mb-2">My first home</h3>
                 <p class="card_detail_desc mb-2">

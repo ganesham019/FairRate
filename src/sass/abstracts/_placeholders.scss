@@ -72,3 +72,118 @@
   border-style: solid;
   border-color: transparent transparent $white transparent;
 }
+
+%checkbox-label {
+  position: relative;
+  padding: 8px;
+  width: 100%;
+  background-color: $white;
+  @include flexbox(space-between, center);
+  label {
+    width: 100%;
+    // @extend %font-basic;
+  }
+  input {
+    padding: 4px;
+    width: 100%;
+    @extend %font-basic;
+    font-size: $sm;
+    &:focus {
+      border: none;
+      outline: none;
+    }
+    &::placeholder {
+      /* Chrome, Firefox, Opera, Safari 10.1+ */
+      color: $muted;
+      opacity: 1; /* Firefox */
+    }
+    &::-webkit-inner-spin-button,
+    &::-webkit-calendar-picker-indicator {
+      display: none;
+      -webkit-appearance: none;
+    }
+  }
+}
+
+%checkbox {
+  position: absolute;
+  opacity: 0;
+  @include flexbox(center, center);
+  // Text
+  & + label {
+    cursor: pointer;
+    position: relative;
+    height: 23px;
+    padding-left: 46px;
+    text-transform: capitalize;
+    @include flexbox(flex-start, center);
+    @extend %font-basic; // Label colour
+    // Checkbox
+    &::before {
+      content: "";
+      position: absolute;
+      left: 10px;
+      top: 0;
+      width: 20px;
+      height: 20px;
+      @extend %border-basic;
+      background: transparent;
+      transition: all 0.4s ease-out;
+    }
+    // Tick
+    &::after {
+      content: "";
+      position: absolute;
+      top: 3px;
+      left: 18px;
+      width: 6px;
+      height: 12px;
+      border-right: 2px solid transparent;
+      border-bottom: 2px solid transparent;
+      transform: rotate(45deg);
+      transition: all 0.4s ease-out;
+    }
+  }
+  // Focus
+  & + label:focus {
+    outline: none;
+  }
+
+  // Checked
+  &:checked {
+    & + label {
+      &:before {
+        background: $white;
+        border: 2px solid $primary;
+      }
+      &:after {
+        border-color: $primary;
+      }
+    }
+  }
+}
+%pie_shape{
+width: 110px;
+height: 110px;
+border: 8px solid $muted-light;
+position: relative;
+border-radius: 50%;
+}
+%pie-text{
+    @extend %heading;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+%pie-outline{
+  position: absolute;
+  bottom: -8px;
+  left: -7px;
+  width: 110px;
+  height: 110px;
+  border: 8px solid $primary;
+  border-radius: 50%;
+  transform: rotate(70deg);
+  clip-path: polygon(0% 0%, 100% 0%, 100% 90%, 0% 50%);
+}
