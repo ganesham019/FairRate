@@ -80,7 +80,6 @@ document.addEventListener('DOMContentLoaded', () => {
     options.forEach((option) => {
         option.addEventListener('click', () => {
             let selectedOption = option.innerText;
-            console.log(selectedOption);
             getOptionText.innerText = selectedOption;
             getSelectMenuBtn.classList.remove('active');
         })
@@ -96,7 +95,7 @@ document.addEventListener('DOMContentLoaded', () => {
     filterOptions.forEach((option) => {
         option.addEventListener('click', () => {
             let selectedOption = option.innerText;
-            console.log(selectedOption);
+            filterResBtn.classList.remove('disabled');
             getFilterText.innerText = selectedOption;
             getFilterMenuBtn.classList.remove('active');
         })
@@ -123,7 +122,6 @@ document.addEventListener('DOMContentLoaded', () => {
     let brandMarkup = "";
 
     const displayData = (data) => {
-        console.log(data);
         filterSlicedData = data.slice(firstIndex, lastIndex);
         data.forEach((item, index) => {
             brandMarkup += `<ul class="brands_container_list_item" data-year="${item.year}">
@@ -255,23 +253,13 @@ document.addEventListener('DOMContentLoaded', () => {
         updateButtonState();
         showData();
     })
-    // filterResBtn.style.opacity = "0.5";
 
-
-    filterResBtn.style.opacity = "0.5";
     // filter result
-
-
     filterResBtn.addEventListener('click', () => {
-        if (getFilterText.innerText === "Select Option") {
-            debugger;
-        }else{
-            slicedData = [];
-            brandMarkup = "";
-            let filterData = pageData.filter((item) => item.year == getFilterText.innerText);
-            console.log(filterData);
-            displayData(filterData);
-        }
+        slicedData = [];
+        brandMarkup = "";
+        let filterData = pageData.filter((item) => item.year == getFilterText.innerText);
+        displayData(filterData);
     })
 
     // load local file to display
@@ -437,7 +425,6 @@ document.addEventListener('DOMContentLoaded', () => {
     // const sevenPercent = document.getElementById('sevenpercent');
     // const fivePercent = document.getElementById('fivepercent');
 
-    // console.log(minyear);
     // // const getRateItems = document.querySelectorAll('.rates_table_list_item')
     // // get all checkbox
     // const getAllRateCheckBox = document.querySelectorAll('.rate_checkbox input[type="checkbox"]');
@@ -447,7 +434,6 @@ document.addEventListener('DOMContentLoaded', () => {
     //     item.addEventListener('change', (e) => {
 
     //         if (get15Years.checked) {
-    //             console.log(minyear);
     //             minyear.classList.remove('hide');
     //         } else {
     //             minyear.classList.add('hide');
@@ -826,7 +812,6 @@ document.addEventListener('DOMContentLoaded', () => {
             let personalForm = new FormData(personalSection);
             personalForm.append('apply', getOptionText.innerText);
             const personalFormData = Object.fromEntries(personalForm);
-            console.log(personalFormData);
             // update the values
             personalDataList.address = personalFormData.address;
             personalDataList.apply = personalFormData.apply;

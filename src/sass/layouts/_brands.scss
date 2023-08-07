@@ -129,6 +129,11 @@
             background-color: transparent;
             color: $lexona;
         }
+        &.disabled{
+            cursor: not-allowed;
+          pointer-events: none;
+          opacity: 0.5;
+        }
     }
     .pagination {
         margin-left: auto;
