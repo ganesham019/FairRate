@@ -255,14 +255,23 @@ document.addEventListener('DOMContentLoaded', () => {
         updateButtonState();
         showData();
     })
+    // filterResBtn.style.opacity = "0.5";
 
+
+    filterResBtn.style.opacity = "0.5";
     // filter result
+
+
     filterResBtn.addEventListener('click', () => {
-        slicedData = [];
-        brandMarkup = "";
-        let filterData = pageData.filter((item) => item.year == getFilterText.innerText);
-        console.log(filterData);
-        displayData(filterData);
+        if (getFilterText.innerText === "Select Option") {
+            debugger;
+        }else{
+            slicedData = [];
+            brandMarkup = "";
+            let filterData = pageData.filter((item) => item.year == getFilterText.innerText);
+            console.log(filterData);
+            displayData(filterData);
+        }
     })
 
     // load local file to display
