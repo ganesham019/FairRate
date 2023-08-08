@@ -347,7 +347,7 @@
                 </li>
                 <li>Whithin it’s expiry date</li>
                 <li>
-                  <a href="https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf" target="_blank">See
+                  <a style="font-size:12px;" href="https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf" target="_blank">See
                     a example image</a>
                 </li>
               </ul>
@@ -395,7 +395,7 @@
                 <li class="filter_option">20 Years</li>
               </ul>
             </div> -->
-            <button class="btn_filter" id="filter_btn">
+            <button class="btn_filter disabled" id="filter_btn">
               Filter Results
             </button>
             <div class="pagination">
@@ -449,7 +449,7 @@
               <li>PER MONTH</li>
             </ul>
             <div class="rates_table_list">
-              <ul class="rates_table_list_item hide" id="minyear" data-id="15years">
+              <ul class="rates_table_list_item " id="minyear" data-id="15years" style="display:flex;">
                 <li>
                   <p class="round_bg_shape bg-lexona">15 years</p>
                   <span class="status">Fixed</d>
@@ -462,7 +462,7 @@
                   <h4>$3,120</h4> <span class="bar range_lexona"></span>
                 </li>
               </ul>
-              <ul class="rates_table_list_item hide" id="mediumyear" data-id="20years">
+              <ul class="rates_table_list_item " id="mediumyear" data-id="20years"  style="display:flex;">
                 <li>
                   <p class="round_bg_shape bg-primary">20 years</p>
                   <span class="status">Fixed</d>
@@ -475,7 +475,7 @@
                   <h4>$3,120</h4> <span class="bar range_primary"></span>
                 </li>
               </ul>
-              <ul class="rates_table_list_item hide" id="longyear" data-id="30years">
+              <ul class="rates_table_list_item " id="longyear" data-id="30years"  style="display:flex;">
                 <li>
                   <p class="round_bg_shape bg-cerulean">30 years</p>
                   <span class="status">Fixed</d>
@@ -488,7 +488,7 @@
                   <h4>$3,120</h4> <span class="bar range_cerulean"></span>
                 </li>
               </ul>
-              <ul class="rates_table_list_item hide" id="tenpercent" data-id="rateten">
+              <ul class="rates_table_list_item " id="tenpercent" data-id="tenpercent"  style="display:flex;">
                 <li>
                   <p class="round_bg_shape bg-iris">10/1</p>
                   <span class="status">Adjustable</d>
@@ -501,7 +501,7 @@
                   <h4>$3,120</h4> <span class="bar range_iris"></span>
                 </li>
               </ul>
-              <ul class="rates_table_list_item hide" id="sevenpercent" data-id="rateseven">
+              <ul class="rates_table_list_item " id="sevenpercent" data-id="sevenpercent"  style="display:flex;">
                 <li>
                   <p class="round_bg_shape bg-purple">7/1</p>
                   <span class="status">Adjustable</d>
@@ -514,7 +514,7 @@
                   <h4>$3,120</h4> <span class="bar range_purple"></span>
                 </li>
               </ul>
-              <ul class="rates_table_list_item hide" id="fivepercent" data-id="ratefive">
+              <ul class="rates_table_list_item " id="fivepercent" data-id="fivepercent"  style="display:flex;">
                 <li>
                   <p class="round_bg_shape bg-pink">5/1</p>
                   <span class="status">Adjustable</d>
@@ -530,7 +530,7 @@
             </div>
           </div>
           <div class="rates_wrap_filter">
-            <!-- <div class="rates_wrap_filter_boxes">
+            <div class="rates_wrap_filter_boxes">
               <div class="input_set checkbox_set mb-1">
                 <input class="checkbox" type="checkbox" name="fixed" id="fixed" />
                 <label for="fixed">Fixed</label>
@@ -539,34 +539,34 @@
                 <input class="checkbox" type="checkbox" name="adjustable" id="adjustable" />
                 <label for="adjustable">Adjustable</label>
               </div>
-            </div> -->
+            </div>
             <div class="checkbox_rates">
               <ul class="checkbox_rates_box">
                 <li class="input_set rate_checkbox mb-1">
-                  <input class="checkbox" type="checkbox" name="30years" id="30years" checked />
-                  <label for="30years">30 Years</label>
+                  <input class="checkbox fixed" type="checkbox" name="thirtyyear" id="thirtyyear"  />
+                  <label for="thirtyyear">30 Years</label>
                 </li>
                 <li class="input_set rate_checkbox mb-1">
-                  <input class="checkbox" type="checkbox" name="20years" id="20years" checked />
-                  <label for="20years">20 Years</label>
+                  <input class="checkbox fixed" type="checkbox" name="twentyyear" id="twentyyear"  />
+                  <label for="twentyyear">20 Years</label>
                 </li>
                 <li class="input_set rate_checkbox mb-1">
-                  <input class="checkbox" type="checkbox" name="15years" id="15years" checked />
-                  <label for="15years">15 Years</label>
+                  <input class="checkbox fixed" type="checkbox" name="fifteenyear" id="fifteenyear"  />
+                  <label for="fifteenyear">15 Years</label>
                 </li>
               </ul>
               <ul class="checkbox_rates_box">
                 <li class="input_set rate_checkbox mb-1">
-                  <input class="checkbox" type="checkbox" name="reteten" id="reteten" checked />
-                  <label for="reteten">10/1</label>
+                  <input class="checkbox adjustable" type="checkbox" name="rateten" id="rateten"  />
+                  <label for="rateten">10 / 1</label>
                 </li>
                 <li class="input_set rate_checkbox mb-1">
-                  <input class="checkbox" type="checkbox" name="rateseven" id="rateseven" checked />
-                  <label for="rateseven">7/1</label>
+                  <input class="checkbox adjustable" type="checkbox" name="rateseven" id="rateseven"  />
+                  <label for="rateseven">7 / 1</label>
                 </li>
                 <li class="input_set rate_checkbox mb-1">
-                  <input class="checkbox" type="checkbox" name="ratefive" id="ratefive" checked />
-                  <label for="ratefive">5/1</label>
+                  <input class="checkbox adjustable" type="checkbox" name="ratefive" id="ratefive"  />
+                  <label for="ratefive">5 / 1</label>
                 </li>
               </ul>
             </div>

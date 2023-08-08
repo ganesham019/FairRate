@@ -5,6 +5,7 @@ import brandsData from './branddata';
 document.addEventListener('DOMContentLoaded', () => {
     let userDataList = {};
     let personalDataList = {};
+
     // regex patterns
     let firstNameRegex = /^[A-Za-z]{3,29}$/;
     let lastNameRegex = /^[A-Za-z]{1,29}$/;
@@ -80,7 +81,6 @@ document.addEventListener('DOMContentLoaded', () => {
     options.forEach((option) => {
         option.addEventListener('click', () => {
             let selectedOption = option.innerText;
-            console.log(selectedOption);
             getOptionText.innerText = selectedOption;
             getSelectMenuBtn.classList.remove('active');
         })
@@ -96,7 +96,7 @@ document.addEventListener('DOMContentLoaded', () => {
     filterOptions.forEach((option) => {
         option.addEventListener('click', () => {
             let selectedOption = option.innerText;
-            console.log(selectedOption);
+            filterResBtn.classList.remove('disabled');
             getFilterText.innerText = selectedOption;
             getFilterMenuBtn.classList.remove('active');
         })
@@ -117,13 +117,11 @@ document.addEventListener('DOMContentLoaded', () => {
     // dummy Array;
     let pageData = brandsData;
     let slicedData = [];
-    let filterSlicedData = [];
 
     // markup for brand list
     let brandMarkup = "";
 
     const displayData = (data) => {
-        console.log(data);
         filterSlicedData = data.slice(firstIndex, lastIndex);
         data.forEach((item, index) => {
             brandMarkup += `<ul class="brands_container_list_item" data-year="${item.year}">
@@ -261,7 +259,6 @@ document.addEventListener('DOMContentLoaded', () => {
         slicedData = [];
         brandMarkup = "";
         let filterData = pageData.filter((item) => item.year == getFilterText.innerText);
-        console.log(filterData);
         displayData(filterData);
     })
 
@@ -413,74 +410,132 @@ document.addEventListener('DOMContentLoaded', () => {
         uploadFile(e);
     })
 
+     // parent chekcbox
+    const adjustableCheck = document.getElementById('adjustable');
+    const fixedCheck = document.getElementById('fixed');
+
     // filter checkbox 
-    // const get30Years = document.getElementById('30years');
-    // const get20Years = document.getElementById('20years');
-    // const get15Years = document.getElementById('15years');
-    // const getRateTen = document.getElementById('reteten');
-    // const getRateSeven = document.getElementById('rateseven');
-    // const getRateFive = document.getElementById('ratefive');
+    const adjustableCheckBoxes = document.querySelectorAll('.adjustable');
+    const fixedCheckBoxes = document.querySelectorAll('.fixed');
 
-    // const minyear = document.getElementById('minyear');
-    // const mediumyear = document.getElementById('minyear');
-    // const longYear = document.getElementById('longyear');
-    // const tenPercent = document.getElementById('tenpercent');
-    // const sevenPercent = document.getElementById('sevenpercent');
-    // const fivePercent = document.getElementById('fivepercent');
+    const fifteenYearCheckbox = document.getElementById('fifteenyear');
+    const twentyYearCheckbox = document.getElementById('twentyyear');
+    const thirtyYearCheckbox = document.getElementById('thirtyyear');
+    const rateTenCheckbox = document.getElementById('rateten');
+    const rateSevenCheckbox = document.getElementById('rateseven');
+    const rateFiveCheckbox = document.getElementById('ratefive');
 
-    // console.log(minyear);
-    // // const getRateItems = document.querySelectorAll('.rates_table_list_item')
-    // // get all checkbox
-    // const getAllRateCheckBox = document.querySelectorAll('.rate_checkbox input[type="checkbox"]');
+    const minYear = document.getElementById('minyear');
+    const mediumYear = document.getElementById('mediumyear');
+    const thirtyYear = document.getElementById('longyear');
 
-    // add checkbox set active
-    // getAllRateCheckBox.forEach((item) => {
-    //     item.addEventListener('change', (e) => {
+    const tenPercent = document.getElementById('tenpercent');
+    const sevenPercent = document.getElementById('sevenpercent');
+    const fivePercent = document.getElementById('fivepercent');
 
-    //         if (get15Years.checked) {
-    //             console.log(minyear);
-    //             minyear.classList.remove('hide');
-    //         } else {
-    //             minyear.classList.add('hide');
-    //         }
+    adjustableCheck.addEventListener('change', () => {
+        if (adjustableCheck.checked) {
+            rateTenCheckbox.checked = true;
+            rateSevenCheckbox.checked = true;
+            rateFiveCheckbox.checked = true;
+            fivePercent.style.display = "flex";
+            sevenPercent.style.display = "flex";
+            tenPercent.style.display = "flex";
+        } else {
+            rateTenCheckbox.checked = false;
+            rateSevenCheckbox.checked = false;
+            rateFiveCheckbox.checked = false;
+            fivePercent.style.display = "none";
+            sevenPercent.style.display = "none";
+            tenPercent.style.display = "none";
+        }
+    })
+    fixedCheck.addEventListener('change', () => {
+        if (fixedCheck.checked) {
+            fifteenYearCheckbox.checked = true;
+            twentyYearCheckbox.checked = true;
+            thirtyYearCheckbox.checked = true;
+            minYear.style.display = "flex";
+            mediumYear.style.display = "flex";
+            thirtyYear.style.display = "flex";
+        } else {
+            fifteenYearCheckbox.checked = false;
+            twentyYearCheckbox.checked = false;
+            thirtyYearCheckbox.checked = false;
+            minYear.style.display = "none";
+            mediumYear.style.display = "none";
+            thirtyYear.style.display = "none";
+        }
+    })
 
-    //         if (get20Years.checked) {
-    //             mediumyear.classList.remove('hide');
-    //         } else {
-    //             mediumyear.classList.add('hide');
-    //         }
+    fixedCheckBoxes.forEach((checkbox) => {
+        checkbox.addEventListener('change', () => {
+            if (fifteenYearCheckbox.checked && twentyYearCheckbox.checked && thirtyYearCheckbox.checked) {
+                fixedCheck.checked = true;
+            } else {
+                fixedCheck.checked = false;
+            }
+        })
+    })
 
-    //         if (get30Years.checked) {
-    //             longYear.classList.remove('hide');
-    //         } else {
-    //             longYear.classList.add('hide');
-    //         }
-    //         if (getRateTen.checked) {
-    //             tenPercent.classList.remove('hide');
-    //         } else {
-    //             tenPercent.classList.add('hide');
-    //         }
-    //         if (getRateSeven.checked) {
-    //             sevenPercent.classList.remove('hide');
-    //         } else {
-    //             sevenPercent.classList.add('hide');
-    //         }
-    //         if (getRateFive.checked) {
-    //             fivePercent.classList.remove('hide');
-    //         } else {
-    //             fivePercent.classList.add('hide');
-    //         }
-    //         // let parentElement = item.parentElement;
-    //         // if (e.target.checked) {
-    //         //     parentElement.classList.add('active');
-    //         // } else {
-    //         //     parentElement.classList.remove('active');
-    //         // }
-    //     })
-    // });
+    adjustableCheckBoxes.forEach((checkbox) => {
+        checkbox.addEventListener('change', () => {
+            if (rateTenCheckbox.checked && rateSevenCheckbox.checked && rateFiveCheckbox.checked) {
+                adjustableCheck.checked = true;
+            } else {
+                adjustableCheck.checked = false;
+            }
+        })
+    })
 
-
-
+    // thirty
+    thirtyYearCheckbox.addEventListener('change', () => {
+        if (thirtyYearCheckbox.checked) {
+            thirtyYear.style.display = "flex";
+        } else {
+            thirtyYear.style.display = "none";
+        }
+    });
+    // 20 year
+    twentyYearCheckbox.addEventListener('change', () => {
+        if (twentyYearCheckbox.checked) {
+            mediumYear.style.display = "flex";
+        } else {
+            mediumYear.style.display = "none";
+        }
+    });
+    // 15 year
+    fifteenYearCheckbox.addEventListener('change', () => {
+        if (fifteenYearCheckbox.checked) {
+            minYear.style.display = "flex";
+        } else {
+            minYear.style.display = "none";
+        }
+    });
+    // 10/1 points
+    rateTenCheckbox.addEventListener('change', () => {
+        if (rateTenCheckbox.checked) {
+            tenPercent.style.display = "flex";
+        } else {
+            tenPercent.style.display = "none";
+        }
+    });
+    // 7 /1 points
+    rateSevenCheckbox.addEventListener('change', () => {
+        if (rateSevenCheckbox.checked) {
+            sevenPercent.style.display = "flex";
+        } else {
+            sevenPercent.style.display = "none";
+        }
+    });
+    // 5 /1 points
+    rateFiveCheckbox.addEventListener('change', () => {
+        if (rateFiveCheckbox.checked) {
+            fivePercent.style.display = "flex";
+        } else {
+            fivePercent.style.display = "none";
+        }
+    });
 
     // load section every refresh
     const loadSection = () => {
@@ -574,6 +629,16 @@ document.addEventListener('DOMContentLoaded', () => {
             //    show data from array of object
             showData();
         } else if (currentStatus == 5) {
+            // load all the checkbox true
+            fixedCheck.checked = true;
+            adjustableCheck.checked = true;
+            fifteenYearCheckbox.checked = true;
+            twentyYearCheckbox.checked = true;
+            thirtyYearCheckbox.checked = true;
+            rateTenCheckbox.checked = true;
+            rateSevenCheckbox.checked = true;
+            rateFiveCheckbox.checked = true;
+
             userSection.classList.add('hide');
             personalSection.classList.add('hide');
             getDocumentSection.classList.add('hide');
@@ -605,7 +670,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         else {
             userSection.classList.remove('hide');
-            // personalSection.classList.add('hide');
         }
     }
 
@@ -817,7 +881,6 @@ document.addEventListener('DOMContentLoaded', () => {
             let personalForm = new FormData(personalSection);
             personalForm.append('apply', getOptionText.innerText);
             const personalFormData = Object.fromEntries(personalForm);
-            console.log(personalFormData);
             // update the values
             personalDataList.address = personalFormData.address;
             personalDataList.apply = personalFormData.apply;
