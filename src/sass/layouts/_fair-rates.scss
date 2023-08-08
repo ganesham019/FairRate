@@ -39,7 +39,7 @@
           font-size: $xs - 2;
           padding: 14px 5px;
           border-bottom: 2px solid $muted-1000;
-          @include flexbox(space-between, center);
+          // @include flexbox(space-between, center);
           &:last-child {
             border-bottom: none;
           }
@@ -61,7 +61,6 @@
               background-color: $cerulean;
             }
           }
-
           .range_iris {
             &::before {
               width: 60%;
@@ -140,7 +139,7 @@
       background: $white;
       border-radius: 5px;
       padding: 20px 5px;
-      @include flexbox(center, center);
+      @include flexbox(flex-start, flex-start);
       flex-direction: column;
       box-shadow: 0 2px 1px -1px rgba(0, 0, 0, 0.12),
         0 1px 1px 0 rgba(0, 0, 0, 0.14);
@@ -227,20 +226,6 @@
             padding: 6px;
             text-align: center;
           }
-          // .fair_calc_points {
-          //   @extend %font-basic;
-          //   @extend %border-basic;
-          //   width: 30%;
-          //   padding: 6px;
-          //   text-align: center;
-          // }
-          // .fair_calc_month{
-          //   @extend %font-basic;
-          //   @extend %border-basic;
-          //   width: 30%;
-          //   padding: 6px;
-          //   text-align: center;
-          // }
         }
       }
     }

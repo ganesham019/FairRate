@@ -1,10 +1,20 @@
 @use "../abstracts" as *;
 
 .flatpickr-calendar {
+  font-family: OpenSans;
+  top: 426px !important;
   &.open {
     z-index: 5 !important;
   }
 }
+.flatpickr-day{
+border: 0.6px solid $muted-1000;
+border-radius: 0px;
+}
+.dayContainer{
+justify-content: center;
+}
+
 small {
   width: 100%;
   display: inline-block;

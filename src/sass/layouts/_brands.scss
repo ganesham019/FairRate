@@ -110,10 +110,6 @@
             width: 100%;
             border: 1px solid $muted-dark;
             cursor: pointer;
-            &:hover {
-              background-color: transparent;
-              color: $muted-dark;
-            }
           }
         }
       }
