@@ -231,7 +231,7 @@
   }
   .btn_set {
     text-align: center;
-    @include flexbox(center,center);
+    @include flexbox(center, center);
     .time {
       @extend %font-basic;
     }
@@ -241,7 +241,7 @@
       padding: 10px;
       margin-inline: 10px;
     }
-    .btn_gray{
+    .btn_gray {
       margin-left: auto;
       background-color: $muted-dark;
       color: $white;
