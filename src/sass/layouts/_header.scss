@@ -8,12 +8,13 @@
   width: 100%;
   height: 70px;
   padding: 14px 20px;
-  @include flexbox(center,center);
+  @include flexbox(center, center);
   background-color: $plategray;
   border-bottom: 1px solid $muted-500;
   box-shadow: 0 1px 0 0 var(--pale-blue);
   &_logo {
     font-family: OpenSans;
+    cursor: pointer;
     svg {
       text {
         font-family: OpenSans-SemiBold;
@@ -23,7 +24,7 @@
   }
   &_menus {
     margin-right: 60px;
-    @include flexbox(center,center);
+    @include flexbox(center, center);
     li {
       margin-right: 50px;
       &:nth-last-child(-n + 1) {
@@ -35,6 +36,7 @@
       font-size: $sm;
       font-family: OpenSans;
       text-decoration: none;
+      cursor: pointer;
       &.active {
         color: $dark;
       }
@@ -44,17 +46,75 @@
     }
   }
   &_profile {
-    @include flexbox(center,center);
-    &_sec {
+    @include flexbox(center, center);
+    svg {
+      cursor: pointer;
+      &:hover {
+        path {
+          fill: $primary;
+        }
+      }
+    }
+    .nav_profile_user_option {
+      opacity: 0;
+      visibility: hidden;
+      display: none;
+    }
+    &_user {
       font-family: OpenSans;
       color: $dark-500;
       font-size: $sm;
       margin-left: 20px;
-      @include flexbox(center,center);
+      @include flexbox(center, center);
+      position: relative;
+      cursor: pointer;
       img {
         width: 34px;
         height: 34px;
         margin-right: 10px;
+        cursor: pointer;
+      }
+      .down_arrow {
+        width: 8px;
+        height: 8px;
+        position: relative;
+        top: -1px;
+        border-right: 1px solid $dark;
+        border-bottom: 1px solid $dark;
+        transform: rotate(45deg);
+        margin-inline: 10px;
+      }
+      &.active {
+        .down_arrow {
+          transition: all 0.6s ease-out;
+          transform: rotate(-45deg);
+        }
+        ~ .nav_profile_user_option {
+          min-width: 150px;
+          position: absolute;
+          top: 78px;
+          right: 15px;
+          opacity: 1;
+          visibility: visible;
+          display: flex;
+          @extend %select-basic;
+          border: 0.3px solid $muted-1000;
+          background-color: $white;
+          &::before {
+            @extend %select-pointer;
+            top: -12px;
+            border-width: 6px;
+            margin: 0px -6px;
+            border-bottom-color: #e6e6e6;
+          }
+          &::after {
+            @extend %select-pointer;
+            top: -10.6px;
+            border-width: 6px;
+            margin: 0 -6px;
+            border-bottom-color: #fff;
+          }
+        }
       }
     }
   }

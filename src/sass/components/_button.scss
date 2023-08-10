@@ -36,7 +36,7 @@
 .btn_muted {
   cursor: pointer;
   @extend %btn;
-  @include button($white, $muted-1000);
+  @include button($white, $muted-dark);
   span {
     margin-inline: 12px;
     @extend %font-basic;

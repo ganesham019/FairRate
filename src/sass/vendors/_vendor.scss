@@ -1,0 +1,69 @@
+@use "../abstracts" as *;
+
+.flatpickr-calendar {
+  font-family: OpenSans;
+  top: 422px !important;
+  &.open {
+    z-index: 5 !important;
+  }
+  &::before {
+    @extend %select-pointer;
+    left: 260px !important;
+    top: -14px;
+    border-width: 7px;
+    margin: 0px -7px;
+    border-bottom-color: #e6e6e6;
+  }
+  &::after {
+    @extend %select-pointer;
+    left: 260px !important;
+    top: -9.6px;
+    border-width: 5px;
+    margin: 0 -5px;
+    border-bottom-color: #fff;
+  }
+}
+.flatpickr-weekdays{
+  width: 90%;
+  margin: auto;
+}
+.flatpickr-day {
+  font-family: OpenSans;
+  border: 1px solid $muted-light;
+  border-radius: 0px;
+  height: 35px;
+  line-height: 34px;
+  &:hover{
+    border: 1px solid $muted-light !important;
+  }
+  &.selected{
+    color: $dark;
+    border: 1px solid $muted-light;
+    background-color: #23c0f53b;
+  }
+}
+.dayContainer {
+  padding:5px 0px;
+  justify-content: center;
+}
+.flatpickr-month{
+  height: 40px !important;
+}
+.prevMonthDay {
+  border: 1px solid $muted-light !important;
+  color: $white !important;
+  cursor: not-allowed;
+  pointer-events: none;
+  &:hover{
+    color: transparent !important;
+  }
+}
+.nextMonthDay {
+  @extend .prevMonthDay;
+  border: none !important;
+}
+.today{
+  color: $white;
+  background-color: $green;
+}
+

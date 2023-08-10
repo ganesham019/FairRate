@@ -10,7 +10,7 @@
   }
   &_wrap {
     @include flexbox;
-    min-height: 350px;
+    min-height: 354px;
     .rates_table {
       width: 75%;
       margin-right: 30px;
@@ -39,7 +39,6 @@
           font-size: $xs - 2;
           padding: 14px 5px;
           border-bottom: 2px solid $muted-1000;
-          // @include flexbox(space-between, center);
           &:last-child {
             border-bottom: none;
           }
@@ -232,7 +231,6 @@
   }
   .btn_set {
     text-align: center;
-    width: 70%;
     @include flexbox(center,center);
     .time {
       @extend %font-basic;
@@ -241,7 +239,13 @@
       font-family: OpenSans;
       min-width: 135px;
       padding: 10px;
+      margin-inline: 10px;
+    }
+    .btn_gray{
       margin-left: auto;
+      background-color: $muted-dark;
+      color: $white;
+      min-width: 135px;
     }
   }
 }

@@ -41,6 +41,16 @@
         margin-top: 45px;
       }
     }
+    &_icons{
+      svg{
+        &:hover{
+          cursor: pointer;
+          path{
+            fill: $primary;
+          }
+        }
+      }
+    }
   }
   &_menus {
     font-family: OpenSans;
@@ -49,7 +59,9 @@
       margin-bottom: 20px;
       text-transform: uppercase;
     }
-    p {
+    a {
+      text-decoration: none;
+      display: block;
       color: $dark-light;
       font-size: $sm;
       margin-bottom: 14px;

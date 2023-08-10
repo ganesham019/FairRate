@@ -22,6 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let verfiedSelect = false;
 
     // get sections 
+    const getNav = document.getElementById('nav');
     const userSection = document.getElementById('user_detail');
     const userSubmitButton = document.getElementById('user_det_submit');
     const volunteer = document.getElementById('volunteer');
@@ -45,6 +46,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const getStepsSection = document.getElementById('steps');
     const getRateNextBtn = document.getElementById('rate_next');
     const getProfileStepBtn = document.getElementById('profile_step_btn');
+    const getBrandsBackBtn = document.getElementById('brands_sec_back');
+    const getFairBackBtn = document.getElementById('fair_sec_back');
+    const getStepsSecBackBtn = document.getElementById('steps_sec_back');
+    const getApplySecBackBtn = document.getElementById('application_sec_back');
     const getApplySection = document.getElementById('application');
     const filterResBtn = document.getElementById('filter_btn');
 
@@ -69,15 +74,41 @@ document.addEventListener('DOMContentLoaded', () => {
     const getFireAlarm = document.getElementById('firealarm');
     const getCategoryErr = document.getElementById('categoryErr');
     const getFileErr = document.getElementById('fileErr');
+    const getHomeNav = document.getElementById('home');
+    const getDocumentNav = document.getElementById('documents');
+    const getLogoHomeNav = document.getElementById('logo_home');
+    const getProfileMenu = document.getElementById('nav_profile_user');
 
+    document.addEventListener('click', (e) => {
+        e.stopPropagation();
+        if (e.target.classList.contains('volunteer_name') || e.target.classList.contains('prof_img') || e.target.classList.contains('nav_profile_user') || e.target.classList.contains('down_arrow')) {
+            getProfileMenu.classList.toggle('active');
+        } else if (e.target.classList.contains('nav_profile_user_option')) {
+            getProfileMenu.setAttribute('class', "nav_profile_user active");
+        } else {
+            getProfileMenu.setAttribute('class', 'nav_profile_user');
+        }
+    });
 
     // select menu
     const getSelectMenuBtn = document.getElementById('select_menu_btn');
     let getOptionText = document.getElementById('option_text');
     const options = document.querySelectorAll('.option');
-    getSelectMenuBtn.addEventListener('click', () => {
-        getSelectMenuBtn.classList.toggle('active');
+
+    // if outside click , dropdown will deactive
+    document.addEventListener('click', (e) => {
+        e.stopPropagation();
+        if (e.target.classList.contains('select_menu_btn') || e.target.classList.contains('select_option')) {
+            getSelectMenuBtn.classList.toggle('active');
+        } else if (e.target.classList.contains('options')) {
+            getSelectMenuBtn.setAttribute('class', "select_menu_btn active");
+        }
+        else {
+            getSelectMenuBtn.setAttribute('class', 'select_menu_btn');
+        }
     });
+
+    // get the selecting option in dropwdown
     options.forEach((option) => {
         option.addEventListener('click', () => {
             let selectedOption = option.innerText;
@@ -90,9 +121,20 @@ document.addEventListener('DOMContentLoaded', () => {
     const getFilterMenuBtn = document.getElementById('select_filter_btn');
     let getFilterText = document.getElementById('filter_text');
     const filterOptions = document.querySelectorAll('.filter_option');
-    getFilterMenuBtn.addEventListener('click', () => {
-        getFilterMenuBtn.classList.toggle('active');
+
+    // if outside click , dropdown will deactive
+    document.addEventListener('click', (e) => {
+        e.stopPropagation();
+        if (e.target.classList.contains('filter_menu_btn') || e.target.classList.contains('select_option')) {
+            getFilterMenuBtn.classList.toggle('active');
+        } else if (e.target.classList.contains('filter_options')) {
+            getFilterMenuBtn.setAttribute('class', "filter_menu_btn active");
+        } else {
+            getFilterMenuBtn.setAttribute('class', "filter_menu_btn");
+        }
     });
+
+    // get the selecting option in dropwdown
     filterOptions.forEach((option) => {
         option.addEventListener('click', () => {
             let selectedOption = option.innerText;
@@ -100,7 +142,7 @@ document.addEventListener('DOMContentLoaded', () => {
             getFilterText.innerText = selectedOption;
             getFilterMenuBtn.classList.remove('active');
         })
-    })
+    });
 
     // file sections
     const fileTableContainer = document.getElementById('file_table');
@@ -117,7 +159,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // dummy Array;
     let pageData = brandsData;
     let slicedData = [];
-
+    let filterSlicedData = [];
     // markup for brand list
     let brandMarkup = "";
 
@@ -128,8 +170,6 @@ document.addEventListener('DOMContentLoaded', () => {
             <li>
              <img src="${item.src}" loading="lazy" width="100" height="45" alt="brand" />
              <span>${item.NMSID}</span>
-             <span>${item.year}</span>
-             <span>${item.id}</span>
            </li>
            <li>
              <h3 class="list_heading">${item.aprRate}</h3>
@@ -163,8 +203,6 @@ document.addEventListener('DOMContentLoaded', () => {
             <li>
              <img src="${item.src}" loading="lazy" width="100" height="45" alt="brand" />
              <span>${item.NMSID}</span>
-             <span>${item.year}</span>
-             <span>${item.id}</span>
            </li>
            <li>
              <h3 class="list_heading">${item.aprRate}</h3>
@@ -188,8 +226,9 @@ document.addEventListener('DOMContentLoaded', () => {
          </ul>`
         });
         getBrandListBox.innerHTML = brandMarkup;
-        // displayData(slicedData);
     }
+
+    getPrevBtn.classList.add('disable');
 
     // button diable/enable function
     const updateButtonState = () => {
@@ -299,21 +338,6 @@ document.addEventListener('DOMContentLoaded', () => {
             loadFileList();
         }
     })
-
-    // range slider 
-    const monthRange = document.getElementById('months');
-    const pointsRange = document.getElementById('points');
-    const fairMonthRange = document.getElementById('fair_range_month');
-    const fairPointRange = document.getElementById('fair_calc_points');
-    const currentTime = document.getElementById('current_time');
-
-    pointsRange.oninput = function () {
-        fairPointRange.innerText = this.value;
-    }
-    monthRange.oninput = function () {
-        fairMonthRange.innerText = monthRange.value;
-    }
-
     // if window is reload passlocal storage files to file array
     window.onload = () => {
         //  get from localStorage
@@ -409,8 +433,12 @@ document.addEventListener('DOMContentLoaded', () => {
     getFile.addEventListener('change', (e) => {
         uploadFile(e);
     })
+    // Add this EventListener for we can upload the same image with multiple time
+    getFile.addEventListener("click", function () {
+        getFile.value = "";
+    });
 
-     // parent chekcbox
+    // parent chekcbox
     const adjustableCheck = document.getElementById('adjustable');
     const fixedCheck = document.getElementById('fixed');
 
@@ -433,6 +461,89 @@ document.addEventListener('DOMContentLoaded', () => {
     const sevenPercent = document.getElementById('sevenpercent');
     const fivePercent = document.getElementById('fivepercent');
 
+
+    // range slider 
+    const monthRange = document.getElementById('months');
+    const pointsRange = document.getElementById('points');
+    const fairMonthRange = document.getElementById('fair_range_month');
+    const fairPointRange = document.getElementById('fair_calc_points');
+    const currentTime = document.getElementById('current_time');
+
+
+    monthRange.addEventListener('input', () => {
+        fairMonthRange.innerText = monthRange.value;
+        if (fairMonthRange.innerText >= 3000 && fairMonthRange.innerText <= 3120) {
+            mediumYear.style.display = "flex";
+            minYear.style.display = "flex";
+            thirtyYear.style.display = "flex";
+            tenPercent.style.display = "flex";
+            sevenPercent.style.display = "flex";
+            fivePercent.style.display = "flex";
+        } else if (fairMonthRange.innerText >= 3121 && fairMonthRange.innerText <= 3799) {
+            mediumYear.style.display = "flex";
+            minYear.style.display = "flex";
+            thirtyYear.style.display = "flex";
+            tenPercent.style.display = "flex";
+            sevenPercent.style.display = "none";
+            fivePercent.style.display = "flex";
+        } else if (fairMonthRange.innerText > 3800 && fairMonthRange.innerText <= 4000) {
+            mediumYear.style.display = "flex";
+            minYear.style.display = "none";
+            thirtyYear.style.display = "flex";
+            tenPercent.style.display = "flex";
+            sevenPercent.style.display = "none";
+            fivePercent.style.display = "none";
+        } else if(fairMonthRange.innerText > 4001 && fairMonthRange.innerText <= 4120){
+            mediumYear.style.display = "flex";
+            minYear.style.display = "none";
+            thirtyYear.style.display = "none";
+            tenPercent.style.display = "none";
+            sevenPercent.style.display = "none";
+            fivePercent.style.display = "none";
+        }else{
+            mediumYear.style.display = "none";
+            minYear.style.display = "none";
+            thirtyYear.style.display = "none";
+            tenPercent.style.display = "none";
+            sevenPercent.style.display = "none";
+            fivePercent.style.display = "none";
+        }
+    });
+
+    pointsRange.addEventListener('input', () => {
+        fairPointRange.innerText = pointsRange.value;
+        if (fairPointRange.innerText >= 3000 && fairPointRange.innerText < 3101) {
+            tenPercent.style.display = "flex";
+            sevenPercent.style.display = "flex";
+            fivePercent.style.display = "flex";
+            mediumYear.style.display = "flex";
+            minYear.style.display = "flex";
+            thirtyYear.style.display = "flex";
+        } else if (fairPointRange.innerText > 3101 && fairPointRange.innerText < 3899) {
+            tenPercent.style.display = "flex";
+            sevenPercent.style.display = "none";
+            fivePercent.style.display = "flex";
+            mediumYear.style.display = "flex";
+            minYear.style.display = "flex";
+            thirtyYear.style.display = "flex";
+        } else if (fairPointRange.innerText > 3900 && fairPointRange.innerText < 4120) {
+            tenPercent.style.display = "flex";
+            sevenPercent.style.display = "none";
+            fivePercent.style.display = "none";
+            mediumYear.style.display = "flex";
+            minYear.style.display = "none";
+            thirtyYear.style.display = "none";
+        } else {
+            tenPercent.style.display = "none";
+            sevenPercent.style.display = "none";
+            fivePercent.style.display = "none";
+            mediumYear.style.display = "none";
+            minYear.style.display = "none";
+            thirtyYear.style.display = "none";
+        }
+    });
+
+    // pointsRange.addEventListener
     adjustableCheck.addEventListener('change', () => {
         if (adjustableCheck.checked) {
             rateTenCheckbox.checked = true;
@@ -487,7 +598,8 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         })
     })
-
+    fairMonthRange.innerText = 2000;
+    fairPointRange.innerText = 2200;
     // thirty
     thirtyYearCheckbox.addEventListener('change', () => {
         if (thirtyYearCheckbox.checked) {
@@ -496,6 +608,7 @@ document.addEventListener('DOMContentLoaded', () => {
             thirtyYear.style.display = "none";
         }
     });
+
     // 20 year
     twentyYearCheckbox.addEventListener('change', () => {
         if (twentyYearCheckbox.checked) {
@@ -514,6 +627,8 @@ document.addEventListener('DOMContentLoaded', () => {
     });
     // 10/1 points
     rateTenCheckbox.addEventListener('change', () => {
+        // debugger;
+
         if (rateTenCheckbox.checked) {
             tenPercent.style.display = "flex";
         } else {
@@ -539,6 +654,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // load section every refresh
     const loadSection = () => {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
         // get from local storage when use is refresh the page and refill the input values
         let currentUserDetail = JSON.parse(localStorage.getItem("userDetails"));
         let currentPersonalDetail = JSON.parse(localStorage.getItem("personalDetails"));
@@ -574,7 +691,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 saleParentElement.classList.add('active');
             }
             if (currentPersonalDetail.burgeralarm === 'on') {
-
                 getBurgerAlarm.checked = true;
                 let burgerParentElement = getBurgerAlarm.parentElement.parentElement;
                 burgerParentElement.classList.add('active');
@@ -629,6 +745,7 @@ document.addEventListener('DOMContentLoaded', () => {
             //    show data from array of object
             showData();
         } else if (currentStatus == 5) {
+
             // load all the checkbox true
             fixedCheck.checked = true;
             adjustableCheck.checked = true;
@@ -720,6 +837,51 @@ document.addEventListener('DOMContentLoaded', () => {
             getFileErr.classList.add('active');
             getFileErr.innerText = 'File Upload is Mandatory *';
         }
+    });
+
+    getBrandsBackBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        localStorage.setItem("currentPage", JSON.stringify(3));
+        loadSection();
+    });
+
+    getFairBackBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        localStorage.setItem("currentPage", JSON.stringify(4));
+        loadSection();
+    });
+
+    getStepsSecBackBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        localStorage.setItem("currentPage", JSON.stringify(5));
+
+        thirtyYear.style.display = "flex";
+        mediumYear.style.display = "flex";
+        minYear.style.display = "flex";
+        tenPercent.style.display = "flex";
+        sevenPercent.style.display = "flex";
+        fivePercent.style.display = "flex";
+        loadSection();
+    });
+    getApplySecBackBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        localStorage.setItem("currentPage", JSON.stringify(6));
+        loadSection();
+    });
+    getHomeNav.addEventListener('click', (e) => {
+        e.preventDefault();
+        localStorage.setItem("currentPage", JSON.stringify(1));
+        loadSection();
+    });
+    getDocumentNav.addEventListener('click', (e) => {
+        e.preventDefault();
+        localStorage.setItem("currentPage", JSON.stringify(3));
+        loadSection();
+    });
+    getLogoHomeNav.addEventListener('click', (e) => {
+        e.preventDefault();
+        localStorage.setItem("currentPage", JSON.stringify(1));
+        loadSection();
     });
 
     getRateNextBtn.addEventListener('click', (e) => {
@@ -902,6 +1064,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
             // set to second page status
             getDocumentSection.classList.remove('hide');
+
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
 
         } else {
             verifiedAddress = false;

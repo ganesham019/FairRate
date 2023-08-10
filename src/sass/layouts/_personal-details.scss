@@ -12,7 +12,7 @@
       width: 40%;
       margin-right: 20px;
       &_heading {
-@extend %heading;
+        @extend %heading;
       }
       &_desc {
         @extend %font-basic;
@@ -33,6 +33,59 @@
         @include flexbox(flex-start, center);
         flex-direction: column;
       }
+      .select_menu {
+        min-width: 250px;
+        font-family: OpenSans;
+        position: relative;
+        &_btn {
+          cursor: pointer;
+          @extend %select-basic;
+          margin-bottom: 12px;
+        background-color: $white;
+          &.active {
+            transition: all 0.8s ease-out;
+            .down_arrow {
+              transition: all 0.6s ease-out;
+              transform: rotate(-45deg);
+            }
+            ~ .options {
+              opacity: 1;
+              position: relative;
+              background-color: $white;
+              border-radius: 5px;
+              right: -30%;
+              width: 70%;
+              z-index: 5;
+              box-shadow: 0 2px 16px 0 rgba(33, 43, 54, 0.08),
+                0 0 0 1px rgba(6, 44, 82, 0.1);
+              &::before {
+                @extend %select-pointer;
+                top: -14px;
+                border-width: 7px;
+                margin: 0px -7px;
+                border-bottom-color: #e6e6e6;
+              }
+              &::after {
+                @extend %select-pointer;
+                top: -9.6px;
+                border-width: 5px;
+                margin: 0 -5px;
+                border-bottom-color: #fff;
+              }
+              li {
+                @extend %select-options;
+              }
+            }
+          }
+        }
+        .options {
+          width: 200px;
+          min-height: 164px;
+          padding: 10px;
+          opacity: 0;
+        }
+      }
+      
     }
     .input_set {
       position: relative;
@@ -44,8 +97,8 @@
       @include flexbox(space-between, center);
       &.text_set {
         &:focus-within {
-            border: 2px solid $primary;
-          }
+          border: 2px solid $primary;
+        }
       }
       svg {
         margin-inline: 10px;
@@ -73,9 +126,8 @@
           outline: none;
         }
         &::placeholder {
-          /* Chrome, Firefox, Opera, Safari 10.1+ */
           color: $muted;
-          opacity: 1; /* Firefox */
+          opacity: 1; 
         }
         &::-webkit-inner-spin-button,
         &::-webkit-calendar-picker-indicator {
@@ -92,60 +144,19 @@
       }
     }
     .checkbox {
-      position: absolute;
-      opacity: 0;
-      @include flexbox(center, center);
+     @extend %checkbox;
       // Text
       & + label {
-        cursor: pointer;
-        position: relative;
-        height: 26px;
-        padding-left: 46px;
-        text-transform: capitalize;
-        @include flexbox(flex-start, center);
-        @extend %font-basic; // Label colour
         // Checkbox
         &:before {
-          content: "";
-          position: absolute;
-          left: 10px;
-          top: 0;
           width: 24px;
           height: 24px;
-          @extend %border-basic;
-          background: transparent;
-          transition: all 0.4s ease-out;
         }
-
         // Tick
         &:after {
-          content: "";
-          position: absolute;
-          top: 4px;
+          top: 2px;
           left: 20px;
-          width: 6px;
-          height: 12px;
-          border-right: 2px solid transparent;
-          border-bottom: 2px solid transparent;
-          transform: rotate(45deg);
-          transition: all 0.4s ease-out;
-        }
-      }
-      // Focus
-      & + label:focus {
-        outline: none;
-      }
-
-      // Checked
-      &:checked {
-        & + label {
-          &:before {
-            background: $white;
-            border: 2px solid $primary;
-          }
-          &:after {
-            border-color: $primary;
-          }
+         
         }
       }
     }
@@ -177,9 +188,9 @@
         }
         &.active {
           border: 2px solid $primary;
-          svg{
-            path{
-                fill: $primary;
+          svg {
+            path {
+              fill: $primary;
             }
           }
         }

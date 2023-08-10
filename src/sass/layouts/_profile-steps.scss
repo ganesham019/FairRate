@@ -86,4 +86,10 @@
       }
     }
   }
+  .btn_gray{
+    margin-block: 24px;
+    background-color: $muted-dark;
+    color: $white;
+    min-width: 130px;
+  }
 }

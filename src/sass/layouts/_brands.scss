@@ -8,7 +8,7 @@
   }
   &_container {
     position: relative;
-    height: 650px;
+    height: 750px;
     padding-top: 15px;
     &_header {
       width: 100%;
@@ -35,6 +35,12 @@
       position: relative;
       gap: 10px;
       .filter_menu {
+        .filter_options {
+            visibility: hidden;
+            opacity: 0;
+            width: 250px;
+            position: absolute;
+          }
         &_btn {
           @extend %select-basic;
           &.active {
@@ -44,32 +50,52 @@
               transform: rotate(-45deg);
             }
             + .filter_options {
+              visibility: visible;
+              font-family: OpenSans;
               opacity: 1;
               position: absolute;
               background-color: $white;
-              border-radius: 0px;
-              top: 50px;
+              border-radius: 5px;
+              top: 60px;
               width: 200px;
+              padding: 8px;
               z-index: 5;
               box-shadow: 0 2px 16px 0 rgba(33, 43, 54, 0.08),
                 0 0 0 1px rgba(6, 44, 82, 0.1);
               li {
-                @extend %select-options;
-                border-radius: 0px;
+                border-radius: 4px;
+                padding: 10px;
+                font-size: $xs;
+                margin-block: 5px;
+                color: $dark-500;
+                cursor: pointer;
+                &:hover {
+                  background-color: $muted-500;
+                  color: $dark;
+                }
+              }
+              &::before {
+                @extend %select-pointer;
+                top: -14px;
+                border-width: 7px;
+                margin: 0px -7px;
+                border-bottom-color: #e6e6e6;
+              }
+              &::after {
+                @extend %select-pointer;
+                top: -9.6px;
+                border-width: 5px;
+                margin: 0 -5px;
+                border-bottom-color: #fff;
               }
             }
           }
         }
-        .filter_options {
-          opacity: 0;
-          width: 250px;
-          position: absolute;
-        }
       }
     }
     &_list {
-        height: 450px;
-        overflow-y: scroll;
+      height: 450px;
+      overflow-y: scroll;
       &_item {
         @extend .brands_container_header;
         @include flexbox(center, center);
@@ -114,25 +140,25 @@
         }
       }
     }
-    .btn_filter{
-        padding: 12px;
-        background-color: $lexona;
-        color: $white;
-        font-family: OpenSans;
-        min-width: 120px;
-        font-size: $xs;
-       &:hover{
-            background-color: transparent;
-            color: $lexona;
-        }
-        &.disabled{
-            cursor: not-allowed;
-          pointer-events: none;
-          opacity: 0.5;
-        }
+    .btn_filter {
+      padding: 12px;
+      background-color: $lexona;
+      color: $white;
+      font-family: OpenSans;
+      min-width: 120px;
+      font-size: $xs;
+      &:hover {
+        background-color: transparent;
+        color: $lexona;
+      }
+      &.disabled {
+        cursor: not-allowed;
+        pointer-events: none;
+        opacity: 0.5;
+      }
     }
     .pagination {
-        margin-left: auto;
+      margin-left: auto;
       @include flexbox(center, center);
       .prev {
         cursor: pointer;
@@ -147,6 +173,7 @@
         svg {
           width: 20px;
           height: 16px;
+          margin-top: 5px;
           path {
             fill: $white;
           }
@@ -156,6 +183,14 @@
           pointer-events: none;
           opacity: 0.5;
         }
+      }
+    }
+    .submit_button_set {
+      text-align: center;
+      .btn_gray {
+        background-color: $muted-dark;
+        color: $white;
+        width: 140px;
       }
     }
   }

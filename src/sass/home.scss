@@ -2,11 +2,10 @@
 @use 'base';
 
 //import common style
-@use 'themes/common';
+@use 'vendors';
 
 // import components
 @use 'components';
-
 
 // import layouts
 @use "layouts/header";
@@ -20,3 +19,5 @@
 @use 'layouts/applications';
 @use "layouts/footer";
 
+// vendor css - flat pickr
+@import '~flatpickr/dist/flatpickr.min.css';
