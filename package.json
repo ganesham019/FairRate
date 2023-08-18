@@ -44,7 +44,6 @@
     "last 3 iOS versions"
   ],
   "dependencies": {
-    "flatpickr": "^4.6.13",
-    "js-datepicker": "^5.18.2"
+    "flatpickr": "^4.6.13"
   }
 }

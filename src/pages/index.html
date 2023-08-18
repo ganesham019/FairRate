@@ -1,49 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="../images/favicon-ico.png" />
+    <title>FairRate</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="icon" type="image/x-icon" href="../images/favicon-ico.png" />
-  <title>FairRate</title>
-</head>
-
-<body>
-  <!-- header -->
-  <header>
-    <nav class="nav" id="nav">
-      <ul class="nav_logo">
-        <a id="logo_home">
-          <svg xmlns="http://www.w3.org/2000/svg" width="150" height="39" viewBox="0 0 185 39">
-            <g id="logo" fill="none" fill-rule="evenodd">
-              <text fill="#454F5B" font-size="24">
-                <tspan x="87" y="29">FairRate</tspan>
-              </text>
-              <path fill="#4AD5F6" d="M27 6l27 33H0L27 6zm-4 27h8V22h-8v11z" />
-              <path fill="#95CDB1" d="M54 0L40 16h27L54 0" />
-              <path fill="#FFC48B" d="M69 18L55 34h27L69 18" />
-            </g>
-          </svg>
-        </a>
-      </ul>
-      <ul class="nav_menus ml-auto">
-        <li>
-          <a class="nav_menus_item" id="home">Home</a>
-        </li>
-        <li>
-          <a href="javascript:void(0);" class="nav_menus_item active">Applications
+  <body>
+    <!-- header -->
+    <header>
+      <nav class="nav" id="nav">
+        <ul class="nav_logo">
+          <a id="logo_home">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="150"
+              height="39"
+              viewBox="0 0 185 39"
+            >
+              <g id="logo" fill="none" fill-rule="evenodd">
+                <text fill="#454F5B" font-size="24">
+                  <tspan x="87" y="29">FairRate</tspan>
+                </text>
+                <path
+                  fill="#4AD5F6"
+                  d="M27 6l27 33H0L27 6zm-4 27h8V22h-8v11z"
+                />
+                <path fill="#95CDB1" d="M54 0L40 16h27L54 0" />
+                <path fill="#FFC48B" d="M69 18L55 34h27L69 18" />
+              </g>
+            </svg>
           </a>
-        </li>
-        <li>
-          <a href="javascript:void(0);" class="nav_menus_item" id="documents">Documents</a>
-        </li>
-      </ul>
-      <div class="nav_profile">
-        <div class="nav_profile_notify">
-          <svg version="1.0" xmlns="http://www.w3.org/2000/svg" width="14.000000pt" height="14.000000pt"
-            viewBox="0 0 64.000000 64.000000" preserveAspectRatio="xMidYMid meet">
-            <g transform="translate(0.000000,64.000000) scale(0.100000,-0.100000)" fill="#000000" stroke="none">
-              <path d="M307 634 c-4 -4 -7 -22 -7 -39 0 -29 -5 -34 -45 -49 -85 -33 -125
+        </ul>
+        <ul class="nav_menus ml-auto">
+          <li>
+            <a class="nav_menus_item" id="home">Home</a>
+          </li>
+          <li>
+            <a href="javascript:void(0);" class="nav_menus_item active"
+              >Applications
+            </a>
+          </li>
+          <li>
+            <a href="javascript:void(0);" class="nav_menus_item" id="documents"
+              >Documents</a
+            >
+          </li>
+        </ul>
+        <div class="nav_profile">
+          <div class="nav_profile_notify">
+            <svg
+              version="1.0"
+              xmlns="http://www.w3.org/2000/svg"
+              width="14.000000pt"
+              height="14.000000pt"
+              viewBox="0 0 64.000000 64.000000"
+              preserveAspectRatio="xMidYMid meet"
+            >
+              <g
+                transform="translate(0.000000,64.000000) scale(0.100000,-0.100000)"
+                fill="#000000"
+                stroke="none"
+              >
+                <path
+                  d="M307 634 c-4 -4 -7 -22 -7 -39 0 -29 -5 -34 -45 -49 -85 -33 -125
            -104 -125 -223 0 -73 -11 -105 -50 -150 -35 -39 -37 -54 -12 -76 13 -12 37
            -17 85 -17 63 0 67 -2 81 -28 8 -15 26 -33 41 -40 47 -22 76 -15 116 28 37 39
            40 40 103 40 59 0 67 3 82 25 15 23 15 27 0 48 -65 88 -63 83 -68 179 -3 57
@@ -51,70 +72,111 @@
            37z m83 -136 c61 -42 72 -66 79 -177 7 -92 10 -106 39 -147 18 -24 32 -47 32
            -49 0 -3 -102 -5 -226 -5 l-226 0 28 33 c41 49 54 89 54 169 0 90 24 145 77
            176 49 28 101 28 143 0z m-20 -428 c0 -20 -48 -34 -75 -22 -40 18 -29 32 25
-           32 28 0 50 -5 50 -10z" />
-              <path d="M90 565 c-40 -59 -62 -123 -58 -172 5 -67 33 -43 43 39 4 32 19 67
-           45 105 21 32 36 61 34 65 -12 19 -35 5 -64 -37z" />
-              <path d="M485 600 c-3 -5 7 -27 24 -47 34 -42 61 -111 61 -153 0 -28 21 -55
-           33 -43 24 24 -7 142 -53 207 -33 45 -53 56 -65 36z" />
-            </g>
-          </svg>
+           32 28 0 50 -5 50 -10z"
+                />
+                <path
+                  d="M90 565 c-40 -59 -62 -123 -58 -172 5 -67 33 -43 43 39 4 32 19 67
+           45 105 21 32 36 61 34 65 -12 19 -35 5 -64 -37z"
+                />
+                <path
+                  d="M485 600 c-3 -5 7 -27 24 -47 34 -42 61 -111 61 -153 0 -28 21 -55
+           33 -43 24 24 -7 142 -53 207 -33 45 -53 56 -65 36z"
+                />
+              </g>
+            </svg>
+          </div>
+          <div class="nav_profile_user" id="nav_profile_user">
+            <img
+              src="../images/profile.png"
+              class="prof_img"
+              alt="profile"
+              width="24"
+              height="24"
+            />
+            <p id="volunteer_name" class="volunteer_name">Profile</p>
+            <p class="down_arrow"></p>
+          </div>
+          <div class="nav_profile_user_option">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="20"
+              viewBox="0 0 20 20"
+            >
+              <path
+                fill="#50B8E4"
+                fill-rule="evenodd"
+                d="M5.857 3.95a8.296 8.296 0 0 0-3.035 3.011 8.164 8.164 0 0 0-1.109 4.11c0 4.534 3.718 8.221 8.287 8.221 4.57 0 8.287-3.687 8.287-8.22a8.164 8.164 0 0 0-1.109-4.11 8.296 8.296 0 0 0-3.035-3.011.352.352 0 0 1-.13-.484.358.358 0 0 1 .488-.129 9.007 9.007 0 0 1 3.295 3.27A8.868 8.868 0 0 1 19 11.071C19 15.995 14.962 20 10 20s-9-4.005-9-8.928c0-1.57.416-3.114 1.204-4.465A9.008 9.008 0 0 1 5.5 3.338a.358.358 0 0 1 .487.13c.1.168.041.385-.13.483zM9.643.355C9.643.158 9.803 0 10 0c.197 0 .357.158.357.354v10.718c0 .195-.16.354-.357.354a.355.355 0 0 1-.357-.354V.354z"
+              ></path>
+            </svg>
+            <p>Log out</p>
+          </div>
         </div>
-        <div class="nav_profile_user" id="nav_profile_user">
-          <img src="../images/profile.png" class="prof_img" alt="profile" width="24" height="24" />
-          <p id="volunteer_name" class="volunteer_name">Profile</p>
-          <p class="down_arrow"></p>
-        </div>
-        <div class="nav_profile_user_option">
-          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
-            <path fill="#50B8E4" fill-rule="evenodd"
-              d="M5.857 3.95a8.296 8.296 0 0 0-3.035 3.011 8.164 8.164 0 0 0-1.109 4.11c0 4.534 3.718 8.221 8.287 8.221 4.57 0 8.287-3.687 8.287-8.22a8.164 8.164 0 0 0-1.109-4.11 8.296 8.296 0 0 0-3.035-3.011.352.352 0 0 1-.13-.484.358.358 0 0 1 .488-.129 9.007 9.007 0 0 1 3.295 3.27A8.868 8.868 0 0 1 19 11.071C19 15.995 14.962 20 10 20s-9-4.005-9-8.928c0-1.57.416-3.114 1.204-4.465A9.008 9.008 0 0 1 5.5 3.338a.358.358 0 0 1 .487.13c.1.168.041.385-.13.483zM9.643.355C9.643.158 9.803 0 10 0c.197 0 .357.158.357.354v10.718c0 .195-.16.354-.357.354a.355.355 0 0 1-.357-.354V.354z">
-            </path>
-          </svg>
-          <p> Log out</p>
-        </div>
-      </div>
-    </nav>
-  </header>
+      </nav>
+    </header>
 
-  <main class="content">
-    <div class="container-sm">
-      <!-- user details -->
-      <form class="user_detail page hide" id="user_detail">
-        <h1 class="user_detail_heading">
-          I'll get you an awesome price in seconds. Ready to go?
-        </h1>
-        <section class="user_detail_inputs mb-4">
-          <div class="input_box">
-            <input type="text" class="firstname" name="firstname" id="firstname" placeholder="First Name" />
-            <small class="firstNameErr" id="firstNameErr"></small>
+    <main class="content">
+      <section class="container-sm">
+        <!-- user details -->
+        <form class="user_detail page hide" id="user_detail" autocomplete="off">
+          <h1 class="user_detail_heading">
+            I'll get you an awesome price in seconds. Ready to go?
+          </h1>
+          <section class="user_detail_inputs mb-4">
+            <div class="input_box">
+              <input
+                type="text"
+                class="firstname"
+                name="firstname"
+                id="firstname"
+                placeholder="First Name"
+              />
+              <small class="firstNameErr" id="firstNameErr"></small>
+            </div>
+            <div class="input_box">
+              <input
+                type="text"
+                class="lastname"
+                name="lastname"
+                id="lastname"
+                placeholder="Last Name"
+              />
+              <small class="lastNameErr" id="lastNameErr"></small>
+            </div>
+          </section>
+          <div>
+            <button class="btn_primary" id="user_det_submit">Next</button>
           </div>
-          <div class="input_box">
-            <input type="text" class="lastname" name="lastname" id="lastname" placeholder="Last Name" />
-            <small class="lastNameErr" id="lastNameErr"></small>
-          </div>
-        </section>
-        <section>
-          <button class="btn_primary" id="user_det_submit">Next</button>
-        </section>
-      </form>
-      <!-- personal details -->
-      <form class="personal page hide" id="personal">
-        <section class="personal_wrap">
-          <section class="personal_wrap_left">
-            <h2 class="personal_wrap_left_heading mb-2">
-              Fill the form on the right
-            </h2>
-            <p class="personal_wrap_left_desc mb-5">
-              Fusce dapibus, tellus ac cursus commodo, tortor mauris
-              condimentum nibh.
-            </p>
-            <section class="date_sec" id="date_sec">
-              <label class="mb-2"> Date of birth </label>
-              <div class="input_set text_set">
-                <svg version="1.0" xmlns="http://www.w3.org/2000/svg" width="28.000000pt" height="28.000000pt"
-                  viewBox="0 0 128.000000 128.000000" preserveAspectRatio="xMidYMid meet">
-                  <g transform="translate(0.000000,128.000000) scale(0.100000,-0.100000)" fill="#000000" stroke="none">
-                    <path d="M257 1263 c-8 -10 -17 -29 -19 -43 -3 -23 -8 -25 -63 -30 -120 -10
+        </form>
+        <!-- personal details -->
+        <form class="personal page hide" id="personal" autocomplete="off">
+          <section class="personal_wrap">
+            <div class="personal_wrap_left">
+              <h2 class="personal_wrap_left_heading mb-2">
+                Fill the form on the right
+              </h2>
+              <p class="personal_wrap_left_desc mb-5">
+                Fusce dapibus, tellus ac cursus commodo, tortor mauris
+                condimentum nibh.
+              </p>
+              <div class="date_sec" id="date_sec">
+                <label class="mb-2"> Date of birth </label>
+                <div class="input_set text_set">
+                  <svg
+                    version="1.0"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="28.000000pt"
+                    height="28.000000pt"
+                    viewBox="0 0 128.000000 128.000000"
+                    preserveAspectRatio="xMidYMid meet"
+                  >
+                    <g
+                      transform="translate(0.000000,128.000000) scale(0.100000,-0.100000)"
+                      fill="#000000"
+                      stroke="none"
+                    >
+                      <path
+                        d="M257 1263 c-8 -10 -17 -29 -19 -43 -3 -23 -8 -25 -63 -30 -120 -10
                  -115 16 -115 -596 0 -551 1 -557 56 -583 35 -16 1013 -16 1048 0 55 26 56 32
                  56 583 0 612 5 586 -115 596 -55 5 -60 7 -63 30 -11 81 -122 78 -122 -3 l0
                  -27 -280 0 -280 0 0 28 c0 54 -68 83 -103 45z m63 -48 c0 -18 -5 -25 -20 -25
@@ -130,55 +192,94 @@
                  90 135 l50 0 0 -38z m820 -887 l-85 -86 -3 72 c-2 43 2 76 9 85 8 10 34 14 88
                  14 l76 0 -85 -85z m105 -171 l-16 -24 -511 2 -511 3 -16 25 c-15 23 -15 24 4
                  15 28 -14 775 -19 822 -6 28 8 64 37 138 111 l100 100 3 -101 c2 -79 -1 -107
-                 -13 -125z" />
-                    <path d="M187 803 c-12 -11 -8 -128 5 -141 7 -7 37 -12 68 -12 31 0 61 5 68
+                 -13 -125z"
+                      />
+                      <path
+                        d="M187 803 c-12 -11 -8 -128 5 -141 7 -7 37 -12 68 -12 31 0 61 5 68
                  12 12 12 17 104 6 132 -5 12 -21 16 -73 16 -37 0 -71 -3 -74 -7z m113 -68 l0
-                 -45 -45 0 -45 0 0 38 c0 21 3 42 7 45 3 4 24 7 45 7 l38 0 0 -45z" />
-                    <path d="M442 798 c-16 -16 -16 -120 0 -136 17 -17 123 -16 137 2 7 9 11 40 9
+                 -45 -45 0 -45 0 0 38 c0 21 3 42 7 45 3 4 24 7 45 7 l38 0 0 -45z"
+                      />
+                      <path
+                        d="M442 798 c-16 -16 -16 -120 0 -136 17 -17 123 -16 137 2 7 9 11 40 9
                  78 l-3 63 -65 3 c-42 2 -70 -2 -78 -10z m116 -65 l3 -43 -45 0 -46 0 0 46 0
-                 45 43 -3 c42 -3 42 -3 45 -45z" />
-                    <path d="M697 803 c-12 -11 -8 -128 5 -141 7 -7 37 -12 68 -12 31 0 61 5 68
+                 45 43 -3 c42 -3 42 -3 45 -45z"
+                      />
+                      <path
+                        d="M697 803 c-12 -11 -8 -128 5 -141 7 -7 37 -12 68 -12 31 0 61 5 68
                  12 16 16 16 120 0 136 -13 13 -130 17 -141 5z m113 -68 l0 -45 -45 0 -45 0 0
-                 38 c0 21 3 42 7 45 3 4 24 7 45 7 l38 0 0 -45z" />
-                    <path d="M946 795 c-11 -28 -7 -120 6 -133 17 -17 123 -16 137 2 7 9 11 40 9
+                 38 c0 21 3 42 7 45 3 4 24 7 45 7 l38 0 0 -45z"
+                      />
+                      <path
+                        d="M946 795 c-11 -28 -7 -120 6 -133 17 -17 123 -16 137 2 7 9 11 40 9
                  78 l-3 63 -71 3 c-59 2 -73 0 -78 -13z m122 -62 l3 -43 -45 0 -46 0 0 46 0 45
-                 43 -3 c42 -3 42 -3 45 -45z" />
-                    <path d="M184 566 c-3 -7 -4 -42 -2 -77 l3 -64 63 -3 c38 -2 69 2 78 9 18 14
+                 43 -3 c42 -3 42 -3 45 -45z"
+                      />
+                      <path
+                        d="M184 566 c-3 -7 -4 -42 -2 -77 l3 -64 63 -3 c38 -2 69 2 78 9 18 14
                  19 120 2 137 -17 17 -137 16 -144 -2z m116 -66 l0 -40 -45 0 -45 0 0 40 0 40
-                 45 0 45 0 0 -40z" />
-                    <path d="M442 568 c-17 -17 -16 -122 2 -137 9 -7 40 -11 78 -9 l63 3 0 75 0
+                 45 0 45 0 0 -40z"
+                      />
+                      <path
+                        d="M442 568 c-17 -17 -16 -122 2 -137 9 -7 40 -11 78 -9 l63 3 0 75 0
                  75 -65 3 c-42 2 -70 -2 -78 -10z m118 -68 l0 -40 -45 0 -45 0 0 40 0 40 45 0
-                 45 0 0 -40z" />
-                    <path d="M694 566 c-3 -7 -4 -42 -2 -77 l3 -64 63 -3 c38 -2 69 2 78 9 18 14
+                 45 0 0 -40z"
+                      />
+                      <path
+                        d="M694 566 c-3 -7 -4 -42 -2 -77 l3 -64 63 -3 c38 -2 69 2 78 9 18 14
                  19 120 2 137 -17 17 -137 16 -144 -2z m116 -66 l0 -40 -45 0 -45 0 0 40 0 40
-                 45 0 45 0 0 -40z" />
-                    <path d="M958 569 c-14 -8 -18 -24 -18 -74 0 -74 10 -85 80 -85 70 0 80 11 80
+                 45 0 45 0 0 -40z"
+                      />
+                      <path
+                        d="M958 569 c-14 -8 -18 -24 -18 -74 0 -74 10 -85 80 -85 70 0 80 11 80
                  85 0 53 -3 66 -19 75 -25 13 -101 13 -123 -1z m112 -74 l0 -45 -45 0 -45 0 0
-                 45 0 45 45 0 45 0 0 -45z" />
-                    <path d="M192 341 c-9 -5 -12 -28 -10 -77 l3 -69 63 -3 c38 -2 69 2 78 9 18
+                 45 0 45 45 0 45 0 0 -45z"
+                      />
+                      <path
+                        d="M192 341 c-9 -5 -12 -28 -10 -77 l3 -69 63 -3 c38 -2 69 2 78 9 18
                  14 19 120 2 137 -14 14 -116 16 -136 3z m108 -77 l0 -45 -42 3 c-43 3 -43 3
-                 -46 46 l-3 42 45 0 46 0 0 -46z" />
-                    <path d="M442 338 c-17 -17 -16 -123 2 -137 9 -7 40 -11 78 -9 l63 3 3 69 c2
+                 -46 46 l-3 42 45 0 46 0 0 -46z"
+                      />
+                      <path
+                        d="M442 338 c-17 -17 -16 -123 2 -137 9 -7 40 -11 78 -9 l63 3 3 69 c2
                  49 -1 72 -10 77 -20 13 -122 11 -136 -3z m116 -70 c-3 -43 -3 -43 -45 -46
-                 l-43 -3 0 45 0 46 46 0 45 0 -3 -42z" />
-                    <path d="M703 343 c-19 -7 -17 -73 2 -73 8 0 15 9 15 20 0 17 7 20 45 20 l45
+                 l-43 -3 0 45 0 46 46 0 45 0 -3 -42z"
+                      />
+                      <path
+                        d="M703 343 c-19 -7 -17 -73 2 -73 8 0 15 9 15 20 0 17 7 20 45 20 l45
                  0 0 -45 0 -45 -39 0 c-22 0 -43 5 -46 10 -12 20 -36 11 -33 -12 3 -21 9 -23
-                 66 -26 38 -2 69 2 78 9 18 14 19 120 2 137 -12 12 -110 16 -135 5z" />
-                  </g>
-                </svg>
-
-                <input type="text" id="datepicker" class="datepicker" placeholder="2023-08-30" name="dob" />
+                 66 -26 38 -2 69 2 78 9 18 14 19 120 2 137 -12 12 -110 16 -135 5z"
+                      />
+                    </g>
+                  </svg>
+                  <input
+                    type="text"
+                    id="datepicker"
+                    class="datepicker"
+                    placeholder="2023-08-30"
+                    name="dob"
+                  />
+                </div>
+                <small id="dateErr"></small>
               </div>
-              <small id="dateErr"></small>
-            </section>
-          </section>
-          <section class="personal_wrap_right">
-            <div class="personal_wrap_box mb-1">
-              <section class="input_set text_set">
-                <svg version="1.0" xmlns="http://www.w3.org/2000/svg" width="28.000000pt" height="28.000000pt"
-                  viewBox="0 0 128.000000 128.000000" preserveAspectRatio="xMidYMid meet">
-                  <g transform="translate(0.000000,128.000000) scale(0.100000,-0.100000)" fill="#000000" stroke="none">
-                    <path d="M545 1266 c-232 -58 -370 -304 -295 -527 12 -34 54 -114 95 -178 41
+            </div>
+            <div class="personal_wrap_right">
+              <div class="personal_wrap_box mb-1">
+                <div class="input_set text_set">
+                  <svg
+                    version="1.0"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="28.000000pt"
+                    height="28.000000pt"
+                    viewBox="0 0 128.000000 128.000000"
+                    preserveAspectRatio="xMidYMid meet"
+                  >
+                    <g
+                      transform="translate(0.000000,128.000000) scale(0.100000,-0.100000)"
+                      fill="#000000"
+                      stroke="none"
+                    >
+                      <path
+                        d="M545 1266 c-232 -58 -370 -304 -295 -527 12 -34 54 -114 95 -178 41
 -65 75 -120 75 -124 0 -3 -19 -8 -42 -12 -67 -11 -176 -51 -219 -80 -75 -49
 -98 -119 -59 -182 116 -190 808 -220 1038 -45 87 66 80 163 -17 227 -43 29
 -152 69 -218 80 -24 4 -43 9 -43 12 0 4 34 59 75 124 41 64 83 144 95 178 76
@@ -187,85 +288,139 @@
 503 -9 24 -16 73 -16 112 1 147 84 269 221 320 59 23 196 15 255 -14z m-239
 -920 c68 -109 83 -125 110 -115 7 3 44 55 82 115 l69 111 51 -6 c114 -13 228
 -62 262 -113 13 -21 12 -25 -19 -56 -68 -68 -237 -107 -459 -107 -247 0 -438
-52 -480 130 -22 41 56 97 183 130 127 33 122 36 201 -89z" />
-                    <path d="M565 1036 c-56 -24 -115 -112 -115 -171 0 -32 25 -90 53 -122 75 -85
+52 -480 130 -22 41 56 97 183 130 127 33 122 36 201 -89z"
+                      />
+                      <path
+                        d="M565 1036 c-56 -24 -115 -112 -115 -171 0 -32 25 -90 53 -122 75 -85
 199 -85 274 0 28 32 53 90 53 122 0 60 -60 148 -117 171 -41 17 -109 17 -148
 0z m133 -79 c68 -33 67 -150 -2 -187 -54 -29 -126 -9 -152 42 -35 68 -4 136
-76 161 18 6 46 0 78 -16z" />
-                  </g>
-                </svg>
-                <input id="address" name="address" class="address" placeholder="Enter the exact address" type="text" />
-              </section>
-              <small id="addressErr" class="addressErr"></small>
-            </div>
-            <div class="personal_wrap_box mb-1">
-              <section class="input_set text_set">
-                <svg version="1.0" xmlns="http://www.w3.org/2000/svg" width="24.000000pt" height="24.000000pt"
-                  viewBox="0 0 64.000000 64.000000" preserveAspectRatio="xMidYMid meet">
-                  <g transform="translate(0.000000,64.000000) scale(0.100000,-0.100000)" fill="#000000" stroke="none">
-                    <path d="M40 539 c-13 -6 -28 -15 -32 -22 -10 -16 -10 -378 0 -394 17 -27 70
+76 161 18 6 46 0 78 -16z"
+                      />
+                    </g>
+                  </svg>
+                  <input
+                    id="address"
+                    name="address"
+                    class="address"
+                    placeholder="Enter the exact address"
+                    type="text"
+                  />
+                </div>
+                <small id="addressErr" class="addressErr"></small>
+              </div>
+              <div class="personal_wrap_box mb-1">
+                <div class="input_set text_set">
+                  <svg
+                    version="1.0"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24.000000pt"
+                    height="24.000000pt"
+                    viewBox="0 0 64.000000 64.000000"
+                    preserveAspectRatio="xMidYMid meet"
+                  >
+                    <g
+                      transform="translate(0.000000,64.000000) scale(0.100000,-0.100000)"
+                      fill="#000000"
+                      stroke="none"
+                    >
+                      <path
+                        d="M40 539 c-13 -6 -28 -15 -32 -22 -10 -16 -10 -378 0 -394 17 -27 70
   -33 312 -33 242 0 295 6 312 33 10 16 10 378 0 394 -4 6 -20 17 -35 22 -36 14
   -523 14 -557 0z m420 -144 c-86 -86 -121 -115 -140 -115 -19 0 -54 29 -140
   115 l-115 115 255 0 255 0 -115 -115z m-343 -152 l-77 -78 0 155 0 155 77 -78
   78 -77 -78 -77z m483 75 l0 -153 -77 77 -78 78 75 75 c41 41 76 75 77 75 2 0
   3 -69 3 -152z m-280 -78 c14 0 41 11 61 24 l36 25 79 -80 79 -79 -255 0 -255
-  0 79 79 79 80 36 -25 c20 -13 47 -24 61 -24z" />
-                  </g>
-                </svg>
-                <input id="email" name="email" class="email" placeholder="Enter the exact mail" type="text" />
-              </section>
-              <small class="emailErr" id="emailErr"></small>
-            </div>
-            <div class="input_set checkbox_set mb-1">
-              <input class="checkbox" type="checkbox" name="rent" id="rent" />
-              <label for="rent">Rent</label>
-            </div>
-            <div class="input_set checkbox_set mb-1">
-              <input class="checkbox" type="checkbox" name="sale" id="sale" />
-              <label for="sale">Sale</label>
-            </div>
-            <div class="input_set checkbox_set mb-1">
-              <input class="checkbox" type="checkbox" name="house" id="house" />
-              <label for="house">House</label>
-            </div>
-            <small class="mb-1" id="categoryErr"></small>
-            <small class="mb-1" id="selectMenuErr"></small>
-            <div class="select_menu mb-5">
-              <div class="select_menu_btn" id="select_menu_btn">
-                <p class="select_option" id="option_text">Select Option</p>
-                <span class="down_arrow" id="down_arrow"></span>
-              </div>
-              <ul class="options">
-                <li class="option">Today</li>
-                <li class="option">Yesterday</li>
-                <li class="option">Last Month</li>
-                <li class="option">I Don't Know</li>
-              </ul>
-            </div>
-            <section class="alarm mb-2">
-              <div class="alarm_box">
-                <div class="input_set_svg mb-2">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="40" height="34" viewBox="0 0 46 48">
-                    <g fill="#23C0F5" fill-rule="nonzero">
-                      <path
-                        d="M21.353 27.266h3.294a.775.775 0 0 0 .771-.778.775.775 0 0 0-.771-.777h-3.294a.775.775 0 0 0-.771.777c0 .43.345.778.771.778z" />
-                      <path
-                        d="M42.843 35.2a.78.78 0 0 0-.068-.031l-5.847-2.267a2.187 2.187 0 0 1-1.288-1.358l-.234-.708c1.309-1.894 1.813-3.753.585-5.609-.556-.84-1.24-1.445-2.083-1.844.367-1.373.566-2.838.566-4.36v-.051h.052c.88 0 1.595-.72 1.595-1.607v-1.659a1.61 1.61 0 0 0-.823-1.405v-1.912C35.298 5.558 29.78 0 23 0c-6.78 0-12.298 5.558-12.298 12.389V14.3a1.61 1.61 0 0 0-.823 1.405v1.659c0 .886.716 1.607 1.595 1.607h.052v.052c0 1.521.2 2.986.566 4.36-.843.398-1.527 1.003-2.083 1.843-1.228 1.856-.724 3.715.585 5.609l-.234.708a2.186 2.186 0 0 1-1.288 1.358L3.225 35.17a.737.737 0 0 0-.068.03A5.727 5.727 0 0 0 0 40.346v5.218A2.43 2.43 0 0 0 2.418 48h41.164A2.43 2.43 0 0 0 46 45.564v-5.218a5.727 5.727 0 0 0-3.157-5.147zm-8.136-9.11c.45.68.818 1.698-.344 3.536-.604.954-1.51 1.968-2.547 3.03a.876.876 0 0 1-.635-.847v-2.833a.787.787 0 0 0-.007-.104 14.535 14.535 0 0 0 2.254-3.99c.506.276.92.666 1.279 1.208zm-21.293-3.8h.19c.544 0 1.055.213 1.442.602a3.543 3.543 0 0 0 2.53 1.056h10.847c.956 0 1.855-.375 2.533-1.058.385-.387.896-.6 1.44-.6h.19c-1.145 5.309-5.008 9.226-9.586 9.226s-8.441-3.917-9.586-9.227zm2.266 11.217a2.437 2.437 0 0 0 .682-1.698v-1.333c1.875 1.634 4.167 2.595 6.638 2.595s4.763-.961 6.638-2.595v1.333c0 .655.255 1.256.682 1.697-2.245 1.413-4.764 2.157-7.32 2.157s-5.075-.744-7.32-2.156zM23 37.218a14.95 14.95 0 0 0 5.169-.93c-2.107 2.157-4.113 4.498-5.169 7.12-1.056-2.622-3.062-4.963-5.169-7.12 1.664.612 3.407.93 5.169.93zm11.577-19.853a.052.052 0 0 1-.051.052h-1.698v-1.763h1.698c.028 0 .051.024.051.052v1.659zm-5.866.052v-1.763h2.573v1.763h-2.573zm-4.94 0v-1.763h3.397v1.763h-3.396zm-4.939 0v-1.763h3.396v1.763h-3.396zm-4.116 0v-1.763h2.573v1.763h-2.573zm14.922-3.318h-3.396v-1.71c0-3.155-.263-6.128-.74-8.374a14.478 14.478 0 0 0-.547-1.973c.973.497 1.874 1.364 2.635 2.557 1.32 2.07 2.048 4.836 2.048 7.79v1.71zm-8.336 0v-1.71c0-2.814.218-5.512.615-7.595.4-2.095.86-2.944 1.083-3.186.222.242.684 1.091 1.083 3.186.397 2.083.615 4.78.615 7.595v1.71h-3.396zm-.257-12.056c-.2.544-.382 1.2-.546 1.973-.478 2.245-.74 5.218-.74 8.373v1.71h-3.397v-1.71c0-2.954.728-5.72 2.048-7.79.761-1.193 1.662-2.06 2.635-2.556zm12.709 10.346v1.71H31.18v-1.71c0-3.249-.814-6.314-2.292-8.631-.17-.267-.348-.52-.531-.76a10.855 10.855 0 0 1 5.396 9.39zM17.642 2.998c-.183.24-.36.493-.53.76-1.479 2.317-2.293 5.382-2.293 8.63V14.1h-2.573v-1.71c0-4.01 2.174-7.518 5.396-9.391zm-6.22 14.367v-1.659c0-.028.024-.052.052-.052h1.698v1.763h-1.698a.052.052 0 0 1-.051-.052zm6.692 1.607l-.002.052v.83c0 .429.345.777.772.777a.775.775 0 0 0 .771-.778v-.83l-.002-.051h6.694l-.002.052v.83c0 .429.345.777.771.777a.775.775 0 0 0 .772-.778v-.83l-.002-.051h5.045v.052c0 .58-.033 1.15-.094 1.71h-.441c-.956 0-1.855.375-2.533 1.059-.385.387-.896.6-1.44.6H17.577a2.017 2.017 0 0 1-1.442-.603 3.543 3.543 0 0 0-2.53-1.056h-.442c-.061-.56-.094-1.13-.094-1.71v-.052h5.045zm-6.82 7.118c.358-.542.772-.932 1.279-1.208a14.535 14.535 0 0 0 2.254 3.99.787.787 0 0 0-.008.104v2.833a.876.876 0 0 1-.634.847c-1.037-1.061-1.944-2.076-2.548-3.03-1.162-1.838-.794-2.855-.344-3.536zm-9.75 19.474v-5.218a4.18 4.18 0 0 1 2.272-3.74l5.81-2.252a3.727 3.727 0 0 0 2.105-2.07c.91 1.05 1.992 2.114 3.093 3.195 3.267 3.21 6.944 6.825 7.364 10.966H9.776v-2.54a.775.775 0 0 0-.772-.777.775.775 0 0 0-.771.777v2.54H2.418a.879.879 0 0 1-.874-.881zm42.912 0a.879.879 0 0 1-.874.88h-5.815v-2.539a.775.775 0 0 0-.771-.778.775.775 0 0 0-.772.778v2.54H23.812c.42-4.141 4.096-7.755 7.364-10.966 1.1-1.081 2.183-2.144 3.093-3.195a3.727 3.727 0 0 0 2.105 2.07l5.81 2.252a4.18 4.18 0 0 1 2.272 3.74v5.218z" />
+  0 79 79 79 80 36 -25 c20 -13 47 -24 61 -24z"
+                      />
                     </g>
                   </svg>
+                  <input
+                    id="email"
+                    name="email"
+                    class="email"
+                    placeholder="Enter the exact mail"
+                    type="text"
+                  />
                 </div>
-                <section class="input_set alarm_set">
-                  <input class="checkbox" type="checkbox" name="burgeralarm" id="burgeralarm" />
-                  <label for="burgeralarm">Burger Alarm</label>
-                </section>
+                <small class="emailErr" id="emailErr"></small>
               </div>
-              <section class="alarm_box">
-                <div class="alarm_box_svg mb-2">
-                  <svg version="1.0" xmlns="http://www.w3.org/2000/svg" width="128.000000pt" height="128.000000pt"
-                    viewBox="0 0 128.000000 128.000000" preserveAspectRatio="xMidYMid meet">
-                    <g transform="translate(0.000000,128.000000) scale(0.100000,-0.100000)" fill="#000000"
-                      stroke="none">
-                      <path d="M740 1220 c-137 -75 -213 -148 -268 -258 -22 -45 -44 -103 -48 -129
+              <div class="input_set checkbox_set mb-1">
+                <input class="checkbox" type="checkbox" name="rent" id="rent" />
+                <label for="rent">Rent</label>
+              </div>
+              <div class="input_set checkbox_set mb-1">
+                <input class="checkbox" type="checkbox" name="sale" id="sale" />
+                <label for="sale">Sale</label>
+              </div>
+              <div class="input_set checkbox_set mb-1">
+                <input
+                  class="checkbox"
+                  type="checkbox"
+                  name="house"
+                  id="house"
+                />
+                <label for="house">House</label>
+              </div>
+              <small class="mb-1" id="categoryErr"></small>
+              <small class="mb-1" id="selectMenuErr"></small>
+              <div class="select_menu mb-5">
+                <div class="select_menu_btn" id="select_menu_btn">
+                  <p class="select_option" id="option_text">Select Option</p>
+                  <span class="down_arrow" id="down_arrow"></span>
+                </div>
+                <ul class="options">
+                  <li class="option">Today</li>
+                  <li class="option">Yesterday</li>
+                  <li class="option">Last Month</li>
+                  <li class="option">I Don't Know</li>
+                </ul>
+              </div>
+              <div class="alarm mb-2">
+                <div class="alarm_box">
+                  <div class="input_set_svg mb-2">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="40"
+                      height="34"
+                      viewBox="0 0 46 48"
+                    >
+                      <g fill="#23C0F5" fill-rule="nonzero">
+                        <path
+                          d="M21.353 27.266h3.294a.775.775 0 0 0 .771-.778.775.775 0 0 0-.771-.777h-3.294a.775.775 0 0 0-.771.777c0 .43.345.778.771.778z"
+                        />
+                        <path
+                          d="M42.843 35.2a.78.78 0 0 0-.068-.031l-5.847-2.267a2.187 2.187 0 0 1-1.288-1.358l-.234-.708c1.309-1.894 1.813-3.753.585-5.609-.556-.84-1.24-1.445-2.083-1.844.367-1.373.566-2.838.566-4.36v-.051h.052c.88 0 1.595-.72 1.595-1.607v-1.659a1.61 1.61 0 0 0-.823-1.405v-1.912C35.298 5.558 29.78 0 23 0c-6.78 0-12.298 5.558-12.298 12.389V14.3a1.61 1.61 0 0 0-.823 1.405v1.659c0 .886.716 1.607 1.595 1.607h.052v.052c0 1.521.2 2.986.566 4.36-.843.398-1.527 1.003-2.083 1.843-1.228 1.856-.724 3.715.585 5.609l-.234.708a2.186 2.186 0 0 1-1.288 1.358L3.225 35.17a.737.737 0 0 0-.068.03A5.727 5.727 0 0 0 0 40.346v5.218A2.43 2.43 0 0 0 2.418 48h41.164A2.43 2.43 0 0 0 46 45.564v-5.218a5.727 5.727 0 0 0-3.157-5.147zm-8.136-9.11c.45.68.818 1.698-.344 3.536-.604.954-1.51 1.968-2.547 3.03a.876.876 0 0 1-.635-.847v-2.833a.787.787 0 0 0-.007-.104 14.535 14.535 0 0 0 2.254-3.99c.506.276.92.666 1.279 1.208zm-21.293-3.8h.19c.544 0 1.055.213 1.442.602a3.543 3.543 0 0 0 2.53 1.056h10.847c.956 0 1.855-.375 2.533-1.058.385-.387.896-.6 1.44-.6h.19c-1.145 5.309-5.008 9.226-9.586 9.226s-8.441-3.917-9.586-9.227zm2.266 11.217a2.437 2.437 0 0 0 .682-1.698v-1.333c1.875 1.634 4.167 2.595 6.638 2.595s4.763-.961 6.638-2.595v1.333c0 .655.255 1.256.682 1.697-2.245 1.413-4.764 2.157-7.32 2.157s-5.075-.744-7.32-2.156zM23 37.218a14.95 14.95 0 0 0 5.169-.93c-2.107 2.157-4.113 4.498-5.169 7.12-1.056-2.622-3.062-4.963-5.169-7.12 1.664.612 3.407.93 5.169.93zm11.577-19.853a.052.052 0 0 1-.051.052h-1.698v-1.763h1.698c.028 0 .051.024.051.052v1.659zm-5.866.052v-1.763h2.573v1.763h-2.573zm-4.94 0v-1.763h3.397v1.763h-3.396zm-4.939 0v-1.763h3.396v1.763h-3.396zm-4.116 0v-1.763h2.573v1.763h-2.573zm14.922-3.318h-3.396v-1.71c0-3.155-.263-6.128-.74-8.374a14.478 14.478 0 0 0-.547-1.973c.973.497 1.874 1.364 2.635 2.557 1.32 2.07 2.048 4.836 2.048 7.79v1.71zm-8.336 0v-1.71c0-2.814.218-5.512.615-7.595.4-2.095.86-2.944 1.083-3.186.222.242.684 1.091 1.083 3.186.397 2.083.615 4.78.615 7.595v1.71h-3.396zm-.257-12.056c-.2.544-.382 1.2-.546 1.973-.478 2.245-.74 5.218-.74 8.373v1.71h-3.397v-1.71c0-2.954.728-5.72 2.048-7.79.761-1.193 1.662-2.06 2.635-2.556zm12.709 10.346v1.71H31.18v-1.71c0-3.249-.814-6.314-2.292-8.631-.17-.267-.348-.52-.531-.76a10.855 10.855 0 0 1 5.396 9.39zM17.642 2.998c-.183.24-.36.493-.53.76-1.479 2.317-2.293 5.382-2.293 8.63V14.1h-2.573v-1.71c0-4.01 2.174-7.518 5.396-9.391zm-6.22 14.367v-1.659c0-.028.024-.052.052-.052h1.698v1.763h-1.698a.052.052 0 0 1-.051-.052zm6.692 1.607l-.002.052v.83c0 .429.345.777.772.777a.775.775 0 0 0 .771-.778v-.83l-.002-.051h6.694l-.002.052v.83c0 .429.345.777.771.777a.775.775 0 0 0 .772-.778v-.83l-.002-.051h5.045v.052c0 .58-.033 1.15-.094 1.71h-.441c-.956 0-1.855.375-2.533 1.059-.385.387-.896.6-1.44.6H17.577a2.017 2.017 0 0 1-1.442-.603 3.543 3.543 0 0 0-2.53-1.056h-.442c-.061-.56-.094-1.13-.094-1.71v-.052h5.045zm-6.82 7.118c.358-.542.772-.932 1.279-1.208a14.535 14.535 0 0 0 2.254 3.99.787.787 0 0 0-.008.104v2.833a.876.876 0 0 1-.634.847c-1.037-1.061-1.944-2.076-2.548-3.03-1.162-1.838-.794-2.855-.344-3.536zm-9.75 19.474v-5.218a4.18 4.18 0 0 1 2.272-3.74l5.81-2.252a3.727 3.727 0 0 0 2.105-2.07c.91 1.05 1.992 2.114 3.093 3.195 3.267 3.21 6.944 6.825 7.364 10.966H9.776v-2.54a.775.775 0 0 0-.772-.777.775.775 0 0 0-.771.777v2.54H2.418a.879.879 0 0 1-.874-.881zm42.912 0a.879.879 0 0 1-.874.88h-5.815v-2.539a.775.775 0 0 0-.771-.778.775.775 0 0 0-.772.778v2.54H23.812c.42-4.141 4.096-7.755 7.364-10.966 1.1-1.081 2.183-2.144 3.093-3.195a3.727 3.727 0 0 0 2.105 2.07l5.81 2.252a4.18 4.18 0 0 1 2.272 3.74v5.218z"
+                        />
+                      </g>
+                    </svg>
+                  </div>
+                  <div class="input_set alarm_set">
+                    <input
+                      class="checkbox"
+                      type="checkbox"
+                      name="burgeralarm"
+                      id="burgeralarm"
+                    />
+                    <label for="burgeralarm">Burger Alarm</label>
+                  </div>
+                </div>
+                <div class="alarm_box">
+                  <div class="alarm_box_svg mb-2">
+                    <svg
+                      version="1.0"
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="128.000000pt"
+                      height="128.000000pt"
+                      viewBox="0 0 128.000000 128.000000"
+                      preserveAspectRatio="xMidYMid meet"
+                    >
+                      <g
+                        transform="translate(0.000000,128.000000) scale(0.100000,-0.100000)"
+                        fill="#000000"
+                        stroke="none"
+                      >
+                        <path
+                          d="M740 1220 c-137 -75 -213 -148 -268 -258 -22 -45 -44 -103 -48 -129
 -3 -27 -8 -51 -10 -54 -2 -4 -41 4 -86 17 -45 13 -83 23 -84 21 -2 -1 -12 -24
 -24 -51 -29 -68 -57 -183 -65 -263 -23 -228 118 -430 342 -488 74 -19 213 -19
 288 0 177 46 313 197 333 367 18 161 -22 272 -144 395 -127 129 -158 222 -135
@@ -279,497 +434,679 @@
 375 50 33 59 33 51 -2z m-75 -578 c0 -42 28 -101 70 -148 61 -67 72 -89 72
 -148 0 -35 -7 -59 -25 -87 -34 -52 -79 -71 -165 -71 -60 0 -74 4 -109 29 -59
 43 -80 102 -65 183 6 33 13 62 15 64 2 2 26 -3 53 -11 27 -8 50 -15 52 -15 1
-0 2 14 2 31 0 53 21 116 52 153 32 39 48 46 48 20z" />
-                    </g>
-                  </svg>
+0 2 14 2 31 0 53 21 116 52 153 32 39 48 46 48 20z"
+                        />
+                      </g>
+                    </svg>
+                  </div>
+                  <div class="input_set alarm_set">
+                    <input
+                      class="checkbox"
+                      type="checkbox"
+                      name="firealarm"
+                      id="firealarm"
+                    />
+                    <label for="firealarm">Fire Alarm</label>
+                  </div>
                 </div>
-                <div class="input_set alarm_set">
-                  <input class="checkbox" type="checkbox" name="firealarm" id="firealarm" />
-                  <label for="firealarm">Fire Alarm</label>
-                </div>
-              </section>
-            </section>
-            <div class="submit_button_set">
-              <button class="btn_muted" id="personal_back">Back</button>
-              <button class="btn_primary" id="personal_submit">Next</button>
+              </div>
+              <div class="submit_button_set">
+                <button class="btn_muted" id="personal_back">Back</button>
+                <button class="btn_primary" id="personal_submit">Next</button>
+              </div>
             </div>
           </section>
-        </section>
-      </form>
+        </form>
 
-      <!-- document details -->
-      <form class="document page hide" id="document">
-        <section class="document_wrap">
-          <h2 class="document_wrap_heading mb-3">
-            Few more step ahead upload your ID Document 👆
-          </h2>
-          <div class="document_wrap_menus mb-4">
-            <button class="btn_gray active" id="doc_photo_sec">
-              Photo Identification
-            </button>
-            <button class="btn_gray" id="doc_address_sec">
-              Photo of Address
-            </button>
-          </div>
-          <div class="document_wrap_upload mb-4" id="document_wrap_photo">
-            <h3 class="document_wrap_upload_heading">
-              UPLOAD PHOTO IDENTIFICATION
-            </h3>
-            <div class="file_upload">
-              <div class="file_upload_left">
-                <div class="file_upload_left_drag">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="92" height="80" viewBox="0 0 92 80">
-                    <g fill="none" fill-rule="evenodd">
-                      <g fill-rule="nonzero" opacity=".357">
-                        <path stroke="#979797" stroke-dasharray="1,1" stroke-width="2"
-                          d="M82.946 5.853L68.457 1.97c-1.992-.534-4.046.686-4.587 2.704l-7.886 29.36c-.541 2.018.628 4.102 2.62 4.636l21.752 5.828c1.992.534 4.064-.681 4.605-2.7l5.901-22.023-7.916-13.923zM78 17.659L80.588 8l7.071 12.247L78 17.66z" />
-                        <path fill="#637381"
-                          d="M73.045 28.34c-.36.571-.816 1.163-1.39 1.794-.254.275-.52.53-.655.764l.101-.01a16.367 16.367 0 0 1 3.016-.03 2.98 2.98 0 0 1-.272-.363c-.39-.564-.659-1.305-.8-2.155zm5.14 5.06c-.206.135-.514.162-.925.052-.71-.19-1.813-.716-2.62-1.443-1.655-.253-2.91-.359-3.955-.308-.052.006-.113.01-.186.02-1.69 1.671-2.788 2.329-3.545 2.126a.868.868 0 0 1-.384-.213l-.371-.41-.015-.055a.879.879 0 0 1 .088-.517c.236-.468.979-1.11 2.289-1.51.212-.084.533-.158.954-.236.411-.41.863-.9 1.349-1.442.734-.835 1.289-1.708 1.743-2.468l.003-.01c-.043-1.223-.066-1.96.613-3.111.18-.333.585-.615.931-.522l.225.06c.215.057.4.187.51.377.452.782-.242 2.21-.883 3.37-.034.051-.056.095-.073.121.091 1.157.396 2.15.855 2.794.193.252.414.511.668.76.433.066.84.155 1.223.258 1.16.31 1.806.704 1.959 1.216a.779.779 0 0 1-.026.544.935.935 0 0 1-.427.547zm-1.163-.565c-.061-.12-.345-.455-1.563-.781-.06-.017-.122-.033-.226.043.552.479 1.121.828 1.521.935.061.017.116.02.17.025l.036.01c.048-.008.077-.01.112-.105-.01-.034-.017-.077-.05-.127zm-7.573-1.317a5.006 5.006 0 0 0-.628.152c-.98.41-1.665.91-1.821 1.262.553-.007 1.398-.464 2.45-1.414zm3.731-5.538l.058-.023c.144-.266.24-.508.35-.688l.067-.135c.233-.481.283-.745.176-1.002l-.133-.084a1.157 1.157 0 0 0-.096.089c-.265.33-.43.982-.422 1.843z" />
+        <!-- document details -->
+        <form class="document page hide" id="document" autocomplete="off">
+          <section class="document_wrap">
+            <h2 class="document_wrap_heading mb-3">
+              Few more step ahead upload your ID Document 👆
+            </h2>
+            <div class="document_wrap_menus mb-4">
+              <button class="btn_gray active" id="doc_photo_sec">
+                Photo Identification
+              </button>
+              <button class="btn_gray" id="doc_address_sec">
+                Photo of Address
+              </button>
+            </div>
+            <div class="document_wrap_upload mb-4" id="document_wrap_photo">
+              <h3 class="document_wrap_upload_heading">
+                UPLOAD PHOTO IDENTIFICATION
+              </h3>
+              <div class="file_upload">
+                <div class="file_upload_left">
+                  <div class="file_upload_left_drag">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="92"
+                      height="80"
+                      viewBox="0 0 92 80"
+                    >
+                      <g fill="none" fill-rule="evenodd">
+                        <g fill-rule="nonzero" opacity=".357">
+                          <path
+                            stroke="#979797"
+                            stroke-dasharray="1,1"
+                            stroke-width="2"
+                            d="M82.946 5.853L68.457 1.97c-1.992-.534-4.046.686-4.587 2.704l-7.886 29.36c-.541 2.018.628 4.102 2.62 4.636l21.752 5.828c1.992.534 4.064-.681 4.605-2.7l5.901-22.023-7.916-13.923zM78 17.659L80.588 8l7.071 12.247L78 17.66z"
+                          />
+                          <path
+                            fill="#637381"
+                            d="M73.045 28.34c-.36.571-.816 1.163-1.39 1.794-.254.275-.52.53-.655.764l.101-.01a16.367 16.367 0 0 1 3.016-.03 2.98 2.98 0 0 1-.272-.363c-.39-.564-.659-1.305-.8-2.155zm5.14 5.06c-.206.135-.514.162-.925.052-.71-.19-1.813-.716-2.62-1.443-1.655-.253-2.91-.359-3.955-.308-.052.006-.113.01-.186.02-1.69 1.671-2.788 2.329-3.545 2.126a.868.868 0 0 1-.384-.213l-.371-.41-.015-.055a.879.879 0 0 1 .088-.517c.236-.468.979-1.11 2.289-1.51.212-.084.533-.158.954-.236.411-.41.863-.9 1.349-1.442.734-.835 1.289-1.708 1.743-2.468l.003-.01c-.043-1.223-.066-1.96.613-3.111.18-.333.585-.615.931-.522l.225.06c.215.057.4.187.51.377.452.782-.242 2.21-.883 3.37-.034.051-.056.095-.073.121.091 1.157.396 2.15.855 2.794.193.252.414.511.668.76.433.066.84.155 1.223.258 1.16.31 1.806.704 1.959 1.216a.779.779 0 0 1-.026.544.935.935 0 0 1-.427.547zm-1.163-.565c-.061-.12-.345-.455-1.563-.781-.06-.017-.122-.033-.226.043.552.479 1.121.828 1.521.935.061.017.116.02.17.025l.036.01c.048-.008.077-.01.112-.105-.01-.034-.017-.077-.05-.127zm-7.573-1.317a5.006 5.006 0 0 0-.628.152c-.98.41-1.665.91-1.821 1.262.553-.007 1.398-.464 2.45-1.414zm3.731-5.538l.058-.023c.144-.266.24-.508.35-.688l.067-.135c.233-.481.283-.745.176-1.002l-.133-.084a1.157 1.157 0 0 0-.096.089c-.265.33-.43.982-.422 1.843z"
+                          />
+                        </g>
+                        <path d="M-11 23h64v64h-64z" />
+                        <path
+                          fill="#919EAB"
+                          fill-rule="nonzero"
+                          d="M26.875 27h-21.5C2.419 27 .027 29.385.027 32.3L0 74.7C0 77.615 2.392 80 5.348 80h32.277C40.581 80 43 77.615 43 74.7V42.9L26.875 27zM32 64.125h-7.875V72h-5.25v-7.875H11v-5.25h7.875V51h5.25v7.875H32v5.25zM24 46V31l15 15H24z"
+                        />
                       </g>
-                      <path d="M-11 23h64v64h-64z" />
-                      <path fill="#919EAB" fill-rule="nonzero"
-                        d="M26.875 27h-21.5C2.419 27 .027 29.385.027 32.3L0 74.7C0 77.615 2.392 80 5.348 80h32.277C40.581 80 43 77.615 43 74.7V42.9L26.875 27zM32 64.125h-7.875V72h-5.25v-7.875H11v-5.25h7.875V51h5.25v7.875H32v5.25zM24 46V31l15 15H24z" />
-                    </g>
-                  </svg>
+                    </svg>
 
-                  <p class="file_text">
-                    Drag files here to upload or
-                    <span>Select a file </span>from your device
-                  </p>
-                  <p class="file_format">
-                    JPG, PNG or PDF only, maximum file size - 1MB
-                  </p>
-                  <input type="file" name="file" id="file" accept="image/png,image/jpeg, application/pdf"
-                    class="hide_file" />
+                    <p class="file_text">
+                      Drag files here to upload or
+                      <span>Select a file </span>from your device
+                    </p>
+                    <p class="file_format">
+                      JPG, PNG or PDF only, maximum file size - 1MB
+                    </p>
+                    <input
+                      type="file"
+                      name="file"
+                      id="file"
+                      accept="image/png,image/jpeg, application/pdf"
+                      class="hide_file"
+                    />
+                  </div>
                 </div>
+                <ul class="file_upload_right">
+                  <li>Your document bust be:</li>
+                  <li>A Governent issued</li>
+                  <li>
+                    <ul>
+                      <li>Passport</li>
+                      <li>Driver License</li>
+                      <li>National ID Card</li>
+                    </ul>
+                  </li>
+                  <li>Whithin it’s expiry date</li>
+                  <li>
+                    <a
+                      style="font-size: 12px"
+                      href="https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf"
+                      target="_blank"
+                      >See a example image</a
+                    >
+                  </li>
+                </ul>
               </div>
-              <ul class="file_upload_right">
-                <li>Your document bust be:</li>
-                <li>A Governent issued</li>
-                <li>
-                  <ul>
-                    <li>Passport</li>
-                    <li>Driver License</li>
-                    <li>National ID Card</li>
-                  </ul>
-                </li>
-                <li>Whithin it’s expiry date</li>
-                <li>
-                  <a style="font-size:12px;"
-                    href="https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf" target="_blank">See
-                    a example image</a>
-                </li>
-              </ul>
-            </div>
-            <small class="" id="fileErr"></small>
-            <h3 class="document_wrap_upload_subhead mb-2">
+              <small class="" id="fileErr"></small>
+              <!-- <h3 class="document_wrap_upload_subhead mb-2">
               Uploading Files:
-            </h3>
-            <div class="file_table" id="file_table"></div>
-          </div>
-          <div class="document_wrap_upload address_upload " style="display: none;" id="document_wrap_address">
-            <h2 class="cmg_soon">Coming soon</h2>
-          </div>
-          <div class="document_button_set" id="document_btn_set">
-            <button class="btn_muted" id="document_back">Back</button>
-            <button class="btn_primary" id="document_submit">Next</button>
-          </div>
-        </section>
-      </form>
-
-      <!-- brands section -->
-      <section class="brands page hide" id="brands">
-        <h1 class="brands_heading">Your fairest results</h1>
-        <div class="brands_container mb-3">
-          <section class="filter_section mb-2">
-            <div class="filter_menu" id="filter_menu">
-              <div class="filter_menu_btn" id="select_filter_btn">
-                <p class="select_option" id="filter_text">Select Option</p>
-                <span class="down_arrow" id="down_arrow"></span>
-              </div>
-              <ul class="filter_options">
-                <li class="filter_option">15 Years</li>
-                <li class="filter_option">20 Years</li>
-                <li class="filter_option">30 Years</li>
-              </ul>
+            </h3> -->
+              <div class="file_table" id="file_table"></div>
             </div>
-            <button class="btn_filter disabled" id="filter_btn">
-              Filter Results
-            </button>
-            <div class="pagination">
-              <button class="prev" id="prev"><svg version="1.0" xmlns="http://www.w3.org/2000/svg" width="20.000000pt"
-                  height="20.000000pt" viewBox="0 0 128.000000 128.000000" preserveAspectRatio="xMidYMid meet">
+            <div
+              class="document_wrap_upload address_upload hide"
+              id="document_wrap_address"
+            >
+              <h2 class="cmg_soon">Coming soon</h2>
+            </div>
+            <div class="document_button_set" id="document_btn_set">
+              <button class="btn_muted" id="document_back">Back</button>
+              <button class="btn_primary" id="document_submit">Next</button>
+            </div>
+          </section>
+        </form>
 
-                  <g transform="translate(0.000000,128.000000) scale(0.100000,-0.100000)" fill="#000000" stroke="none">
-                    <path d="M258 932 c-237 -237 -258 -260 -258 -292 0 -31 21 -55 252 -287 169
+        <!-- brands section -->
+        <section class="brands page hide" id="brands">
+          <h1 class="brands_heading">Your fairest results</h1>
+          <div class="brands_container mb-3">
+            <div class="filter_section mb-2">
+              <div class="filter_menu" id="filter_menu">
+                <div class="filter_menu_btn" id="select_filter_btn">
+                  <p class="select_option" id="filter_text">Select Option</p>
+                  <span class="down_arrow" id="down_arrow"></span>
+                </div>
+                <ul class="filter_options">
+                  <li class="filter_option">15 Years</li>
+                  <li class="filter_option">20 Years</li>
+                  <li class="filter_option">30 Years</li>
+                </ul>
+              </div>
+              <button class="btn_filter disabled" id="filter_btn">
+                Filter Results
+              </button>
+              <div class="pagination">
+                <button class="prev" id="prev">
+                  <svg
+                    version="1.0"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="20.000000pt"
+                    height="20.000000pt"
+                    viewBox="0 0 128.000000 128.000000"
+                    preserveAspectRatio="xMidYMid meet"
+                  >
+                    <g
+                      transform="translate(0.000000,128.000000) scale(0.100000,-0.100000)"
+                      fill="#000000"
+                      stroke="none"
+                    >
+                      <path
+                        d="M258 932 c-237 -237 -258 -260 -258 -292 0 -31 21 -55 252 -287 169
                -169 261 -254 279 -258 59 -13 117 45 104 105 -6 25 -271 298 -325 334 -23 15
                7 16 444 16 l468 0 29 29 c39 40 39 82 0 122 l-29 29 -469 0 c-343 1 -463 4
                -448 11 43 24 324 313 330 340 12 55 -36 109 -98 109 -15 0 -101 -80 -279
-               -258z" />
-                  </g>
-                </svg>
-              </button>
-              <button class="prev" id="next"><svg version="1.0" xmlns="http://www.w3.org/2000/svg" width="20.000000pt"
-                  height="20.000000pt" viewBox="0 0 128.000000 128.000000" preserveAspectRatio="xMidYMid meet">
-
-                  <g transform="translate(0.000000,128.000000) scale(0.100000,-0.100000)" fill="#000000" stroke="none">
-                    <path d="M679 1131 c-30 -29 -39 -47 -39 -72 0 -28 17 -50 142 -176 l142 -143
+               -258z"
+                      />
+                    </g>
+                  </svg>
+                </button>
+                <button class="prev" id="next">
+                  <svg
+                    version="1.0"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="20.000000pt"
+                    height="20.000000pt"
+                    viewBox="0 0 128.000000 128.000000"
+                    preserveAspectRatio="xMidYMid meet"
+                  >
+                    <g
+                      transform="translate(0.000000,128.000000) scale(0.100000,-0.100000)"
+                      fill="#000000"
+                      stroke="none"
+                    >
+                      <path
+                        d="M679 1131 c-30 -29 -39 -47 -39 -72 0 -28 17 -50 142 -176 l142 -143
                -440 0 -441 0 -21 -23 c-33 -35 -31 -119 3 -152 l24 -25 438 0 437 0 -142
                -143 c-125 -126 -142 -148 -142 -176 0 -25 9 -43 39 -72 69 -69 63 -72 349
-               214 190 190 252 259 252 277 0 18 -62 87 -252 277 -286 286 -280 283 -349 214z" />
-                  </g>
-                </svg>
-              </button>
+               214 190 190 252 259 252 277 0 18 -62 87 -252 277 -286 286 -280 283 -349 214z"
+                      />
+                    </g>
+                  </svg>
+                </button>
+              </div>
             </div>
-          </section>
 
-          <ul class="brands_container_header">
-            <li>Lender</li>
-            <li>APR</li>
-            <li>Rate</li>
-            <li>Est. Payment/Fees</li>
-            <li>Questions?</li>
-            <li>Apply Now</li>
-          </ul>
-          <div class="brands_container_list mb-3" id="brand_list_container"></div>
-
-          <div class="submit_button_set">
-            <button class="btn_gray" id="brands_sec_back">Back</button>
-          </div>
-        </div>
-      </section>
-
-      <!-- fair rates -->
-      <section class="rates page hide" id="rates">
-        <h1 class="rates_heading mb-5">Your fairest results</h1>
-        <div class="rates_wrap mb-3">
-          <div class="rates_table">
-            <ul class="rates_table_header">
-              <li>RATE TYPE</li>
-              <li>FAIR RATE / APR</li>
-              <li>POINTS/CREDITS</li>
-              <li>PER MONTH</li>
+            <ul class="brands_container_header">
+              <li>Lender</li>
+              <li>APR</li>
+              <li>Rate</li>
+              <li>Est. Payment/Fees</li>
+              <li>Questions?</li>
+              <li>Apply Now</li>
             </ul>
-            <div class="rates_table_list">
-              <ul class="rates_table_list_item " id="minyear" style="display:flex;">
-                <li>
-                  <p class="round_bg_shape bg-lexona">15 years</p>
-                  <span class="status">Fixed</d>
-                </li>
-                <li>4.250% <span>/ 5.125%</span></li>
-                <li>
-                  <h4>$3,800 </h4> <span class="bar range_lexona"></span>
-                </li>
-                <li>
-                  <h4>$3,800</h4> <span class="bar range_lexona"></span>
-                </li>
-              </ul>
-              <ul class="rates_table_list_item " id="mediumyear" style="display:flex;">
-                <li>
-                  <p class="round_bg_shape bg-primary">20 years</p>
-                  <span class="status">Fixed</d>
-                </li>
-                <li>4.250% <span>/ 5.125%</span></li>
-                <li>
-                  <h4>$4,120 </h4> <span class="bar range_primary"></span>
-                </li>
-                <li>
-                  <h4>$4,120</h4> <span class="bar range_primary"></span>
-                </li>
-              </ul>
-              <ul class="rates_table_list_item " id="longyear" style="display:flex;">
-                <li>
-                  <p class="round_bg_shape bg-cerulean">30 years</p>
-                  <span class="status">Fixed</d>
-                </li>
-                <li>4.250% <span>/ 5.125%</span></li>
-                <li>
-                  <h4>$3,990 </h4> <span class="bar range_cerulean"></span>
-                </li>
-                <li>
-                  <h4>$3,990</h4> <span class="bar range_cerulean"></span>
-                </li>
-              </ul>
-              <ul class="rates_table_list_item " id="tenpercent" style="display:flex;">
-                <li>
-                  <p class="round_bg_shape bg-iris">10/1</p>
-                  <span class="status">Adjustable</d>
-                </li>
-                <li>4.250% <span>/ 5.125%</span></li>
-                <li>
-                  <h4>$3,940</h4> <span class="bar range_iris"></span>
-                </li>
-                <li>
-                  <h4>$3,940</h4> <span class="bar range_iris"></span>
-                </li>
-              </ul>
-              <ul class="rates_table_list_item " id="sevenpercent" style="display:flex;">
-                <li>
-                  <p class="round_bg_shape bg-purple">7/1</p>
-                  <span class="status">Adjustable</d>
-                </li>
-                <li>4.250%<span>/ 5.125%</span></li>
-                <li>
-                  <h4>$3,100 </h4> <span class="bar range_purple"></span>
-                </li>
-                <li>
-                  <h4>$3,100</h4> <span class="bar range_purple"></span>
-                </li>
-              </ul>
-              <ul class="rates_table_list_item " id="fivepercent" style="display:flex;">
-                <li>
-                  <p class="round_bg_shape bg-pink">5/1</p>
-                  <span class="status">Adjustable</d>
-                </li>
-                <li>4.250% <span>/ 5.125%</span></li>
-                <li>
-                  <h4>$3,720 </h4> <span class="bar range_pink"></span>
-                </li>
-                <li>
-                  <h4>$3,720</h4> <span class="bar range_pink"></span>
-                </li>
-              </ul>
+            <div
+              class="brands_container_list mb-3"
+              id="brand_list_container"
+            ></div>
+
+            <div class="submit_button_set">
+              <button class="btn_gray" id="brands_sec_back">Back</button>
             </div>
           </div>
-          <div class="rates_wrap_filter">
-            <div class="rates_wrap_filter_boxes">
-              <div class="input_set checkbox_set mb-1">
-                <input class="checkbox" type="checkbox" name="fixed" id="fixed" />
-                <label for="fixed">Fixed</label>
-              </div>
-              <div class="input_set checkbox_set mb-1">
-                <input class="checkbox" type="checkbox" name="adjustable" id="adjustable" />
-                <label for="adjustable">Adjustable</label>
+        </section>
+
+        <!-- fair rates -->
+        <section class="rates page hide" id="rates">
+          <h1 class="rates_heading mb-5">Your fairest results</h1>
+          <div class="rates_wrap mb-3">
+            <div class="rates_table">
+              <ul class="rates_table_header">
+                <li>RATE TYPE</li>
+                <li>FAIR RATE / APR</li>
+                <li>POINTS/CREDITS</li>
+                <li>PER MONTH</li>
+              </ul>
+              <div class="rates_table_list">
+                <ul class="rates_table_list_item" id="minyear">
+                  <li>
+                    <p class="round_bg_shape bg-lexona">15 years</p>
+                    <span class="status">Fixed</span>
+                  </li>
+                  <li>4.250% <span>/ 5.125%</span></li>
+                  <li>
+                    <h4>$3,800</h4>
+                    <span class="bar range_lexona"></span>
+                  </li>
+                  <li>
+                    <h4>$3,800</h4>
+                    <span class="bar range_lexona"></span>
+                  </li>
+                </ul>
+                <ul class="rates_table_list_item" id="mediumyear">
+                  <li>
+                    <p class="round_bg_shape bg-primary">20 years</p>
+                    <span class="status">Fixed</span>
+                  </li>
+                  <li>4.250% <span>/ 5.125%</span></li>
+                  <li>
+                    <h4>$4,120</h4>
+                    <span class="bar range_primary"></span>
+                  </li>
+                  <li>
+                    <h4>$4,120</h4>
+                    <span class="bar range_primary"></span>
+                  </li>
+                </ul>
+                <ul class="rates_table_list_item" id="longyear">
+                  <li>
+                    <p class="round_bg_shape bg-cerulean">30 years</p>
+                    <span class="status">Fixed</span>
+                  </li>
+                  <li>4.250% <span>/ 5.125%</span></li>
+                  <li>
+                    <h4>$3,990</h4>
+                    <span class="bar range_cerulean"></span>
+                  </li>
+                  <li>
+                    <h4>$3,990</h4>
+                    <span class="bar range_cerulean"></span>
+                  </li>
+                </ul>
+                <ul class="rates_table_list_item" id="tenpercent">
+                  <li>
+                    <p class="round_bg_shape bg-iris">10/1</p>
+                    <span class="status">Adjustable</span>
+                  </li>
+                  <li>4.250% <span>/ 5.125%</span></li>
+                  <li>
+                    <h4>$3,940</h4>
+                    <span class="bar range_iris"></span>
+                  </li>
+                  <li>
+                    <h4>$3,940</h4>
+                    <span class="bar range_iris"></span>
+                  </li>
+                </ul>
+                <ul class="rates_table_list_item" id="sevenpercent">
+                  <li>
+                    <p class="round_bg_shape bg-purple">7/1</p>
+                    <span class="status">Adjustable</span>
+                  </li>
+                  <li>4.250%<span>/ 5.125%</span></li>
+                  <li>
+                    <h4>$3,100</h4>
+                    <span class="bar range_purple"></span>
+                  </li>
+                  <li>
+                    <h4>$3,100</h4>
+                    <span class="bar range_purple"></span>
+                  </li>
+                </ul>
+                <ul class="rates_table_list_item" id="fivepercent">
+                  <li>
+                    <p class="round_bg_shape bg-pink">5/1</p>
+                    <span class="status">Adjustable</span>
+                  </li>
+                  <li>4.250% <span>/ 5.125%</span></li>
+                  <li>
+                    <h4>$3,720</h4>
+                    <span class="bar range_pink"></span>
+                  </li>
+                  <li>
+                    <h4>$3,720</h4>
+                    <span class="bar range_pink"></span>
+                  </li>
+                </ul>
               </div>
             </div>
-            <div class="checkbox_rates">
-              <ul class="checkbox_rates_box">
-                <li class="input_set rate_checkbox mb-1">
-                  <input class="checkbox fixed" type="checkbox" name="thirtyyear" id="thirtyyear" />
-                  <label for="thirtyyear">30 Years</label>
-                </li>
-                <li class="input_set rate_checkbox mb-1">
-                  <input class="checkbox fixed" type="checkbox" name="twentyyear" id="twentyyear" />
-                  <label for="twentyyear">20 Years</label>
-                </li>
-                <li class="input_set rate_checkbox mb-1">
-                  <input class="checkbox fixed" type="checkbox" name="fifteenyear" id="fifteenyear" />
-                  <label for="fifteenyear">15 Years</label>
-                </li>
-              </ul>
-              <ul class="checkbox_rates_box">
-                <li class="input_set rate_checkbox mb-1">
-                  <input class="checkbox adjustable" type="checkbox" name="rateten" id="rateten" />
-                  <label for="rateten">10 / 1</label>
-                </li>
-                <li class="input_set rate_checkbox mb-1">
-                  <input class="checkbox adjustable" type="checkbox" name="rateseven" id="rateseven" />
-                  <label for="rateseven">7 / 1</label>
-                </li>
-                <li class="input_set rate_checkbox mb-1">
-                  <input class="checkbox adjustable" type="checkbox" name="ratefive" id="ratefive" />
-                  <label for="ratefive">5 / 1</label>
-                </li>
-              </ul>
-            </div>
-            <div class="fair_range">
-              <div class="fair_range_wrap">
-                <label for="months">Max per month:</label>
-                <div class="fair_calc">
-                  <input type="range" id="months" name="months" min="3000" max="5000" value="3000">
-                  <p class="fair_range_month" id="fair_range_month"></p>
+            <div class="rates_wrap_filter">
+              <div class="rates_wrap_filter_boxes">
+                <div class="input_set checkbox_set mb-1">
+                  <input
+                    class="checkbox"
+                    type="checkbox"
+                    name="fixed"
+                    id="fixed"
+                  />
+                  <label for="fixed">Fixed</label>
+                </div>
+                <div class="input_set checkbox_set mb-1">
+                  <input
+                    class="checkbox"
+                    type="checkbox"
+                    name="adjustable"
+                    id="adjustable"
+                  />
+                  <label for="adjustable">Adjustable</label>
                 </div>
               </div>
-              <div class="fair_range_wrap">
-                <label for="points">Max points/credit :</label>
-                <div class="fair_calc">
-                  <input type="range" id="points" name="points" min="3000" max="5000" value="3000">
-                  <p class="fair_calc_points" id="fair_calc_points"></p>
+              <div class="checkbox_rates">
+                <ul class="checkbox_rates_box">
+                  <li class="input_set rate_checkbox mb-1">
+                    <input
+                      class="checkbox fixed"
+                      type="checkbox"
+                      name="thirtyyear"
+                      id="thirtyyear"
+                    />
+                    <label for="thirtyyear">30 Years</label>
+                  </li>
+                  <li class="input_set rate_checkbox mb-1">
+                    <input
+                      class="checkbox fixed"
+                      type="checkbox"
+                      name="twentyyear"
+                      id="twentyyear"
+                    />
+                    <label for="twentyyear">20 Years</label>
+                  </li>
+                  <li class="input_set rate_checkbox mb-1">
+                    <input
+                      class="checkbox fixed"
+                      type="checkbox"
+                      name="fifteenyear"
+                      id="fifteenyear"
+                    />
+                    <label for="fifteenyear">15 Years</label>
+                  </li>
+                </ul>
+                <ul class="checkbox_rates_box">
+                  <li class="input_set rate_checkbox mb-1">
+                    <input
+                      class="checkbox adjustable"
+                      type="checkbox"
+                      name="rateten"
+                      id="rateten"
+                    />
+                    <label for="rateten">10 / 1</label>
+                  </li>
+                  <li class="input_set rate_checkbox mb-1">
+                    <input
+                      class="checkbox adjustable"
+                      type="checkbox"
+                      name="rateseven"
+                      id="rateseven"
+                    />
+                    <label for="rateseven">7 / 1</label>
+                  </li>
+                  <li class="input_set rate_checkbox mb-1">
+                    <input
+                      class="checkbox adjustable"
+                      type="checkbox"
+                      name="ratefive"
+                      id="ratefive"
+                    />
+                    <label for="ratefive">5 / 1</label>
+                  </li>
+                </ul>
+              </div>
+              <div class="fair_range">
+                <div class="fair_range_wrap">
+                  <label for="months">Max per month:</label>
+                  <div class="fair_calc">
+                    <input
+                      type="range"
+                      id="months"
+                      name="months"
+                      min="3000"
+                      max="5000"
+                      value="3000"
+                    />
+                    <p class="fair_range_month" id="fair_range_month"></p>
+                  </div>
+                </div>
+                <div class="fair_range_wrap">
+                  <label for="points">Max points/credit :</label>
+                  <div class="fair_calc">
+                    <input
+                      type="range"
+                      id="points"
+                      name="points"
+                      min="3000"
+                      max="5000"
+                      value="3000"
+                    />
+                    <p class="fair_calc_points" id="fair_calc_points"></p>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
 
-        <div class="btn_set">
-          <p class="time" id="current_time"></p>
-          <button class="btn_gray" id="fair_sec_back">Back</button>
-          <button class="btn_primary" id="rate_next">Next</button>
-        </div>
-      </section>
+          <div class="btn_set">
+            <p class="time" id="current_time"></p>
+            <button class="btn_gray" id="fair_sec_back">Back</button>
+            <button class="btn_primary" id="rate_next">Next</button>
+          </div>
+        </section>
 
-      <!-- steps -->
-      <section class="steps page hide" id="steps">
-        <div class="steps_res mb-5">
-          <div class="steps_res_pie">
-            <div class="steps_res_pie_text">60%</div>
-            <div class="steps_res_pie_outline"></div>
+        <!-- steps -->
+        <section class="steps page hide" id="steps">
+          <div class="steps_res mb-5">
+            <div class="steps_res_pie">
+              <div class="steps_res_pie_text">60%</div>
+              <div class="steps_res_pie_outline"></div>
+            </div>
+            <div class="steps_res_details">
+              <h2 class="steps_res_details_heading mb-1">
+                Your Mortgage is 60% Complete
+              </h2>
+              <p class="steps_res_details_desc">
+                Great Start - Please complete remaining steps!
+              </p>
+            </div>
+            <div class="steps_res_talk">
+              <button class="btn_muted disabled">
+                <span>Talk to us</span>
+                <span>
+                  <svg
+                    version="1.0"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="20.000000pt"
+                    height="20.000000pt"
+                    viewBox="0 0 128.000000 128.000000"
+                    preserveAspectRatio="xMidYMid meet"
+                  >
+                    <use href="#right_arrow" />
+                  </svg>
+                </span>
+              </button>
+            </div>
           </div>
-          <div class="steps_res_details">
-            <h2 class="steps_res_details_heading mb-1">
-              Your Mortgage is 60% Complete
-            </h2>
-            <p class="steps_res_details_desc">
-              Great Start Adrian! Please complete remaining steps!
-            </p>
-          </div>
-          <div class="steps_res_talk">
-            <button class="btn_muted disabled">
-              <span>Talk to us</span>
-              <span>
-                <svg version="1.0" xmlns="http://www.w3.org/2000/svg" width="20.000000pt" height="20.000000pt"
-                  viewBox="0 0 128.000000 128.000000" preserveAspectRatio="xMidYMid meet">
-                  <use href="#right_arrow" />
-                </svg>
-              </span>
-            </button>
-          </div>
-        </div>
-        <ul class="steps_list ">
-          <li class="steps_list_item mb-2">
-            <p class="steps_list_item_id">1</p>
-            <p class="steps_list_item_heading">Personal Details</p>
-            <p class="steps_list_item_status"></p>
-          </li>
-          <li class="steps_list_item mb-2">
-            <p class="steps_list_item_id">2</p>
-            <p class="steps_list_item_heading">Employment & Income</p>
-            <p class="steps_list_item_status"></p>
-          </li>
-          <li class="steps_list_item">
-            <p class="steps_list_item_id">3</p>
-            <p class="steps_list_item_heading">Adverse events</p>
-            <button class="btn_primary" id="profile_step_btn">
-              <span>Get Started</span>
-              <span>
-                <svg version="1.0" xmlns="http://www.w3.org/2000/svg" width="20.000000pt" height="20.000000pt"
-                  viewBox="0 0 128.000000 128.000000" preserveAspectRatio="xMidYMid meet">
-                  <g id="right_arrow" transform="translate(0.000000,128.000000) scale(0.100000,-0.100000)"
-                    fill="#000000" stroke="none">
-                    <path d="M679 1131 c-30 -29 -39 -47 -39 -72 0 -28 17 -50 142 -176 l142 -143
+          <ul class="steps_list">
+            <li class="steps_list_item mb-2">
+              <p class="steps_list_item_id">1</p>
+              <p class="steps_list_item_heading">Personal Details</p>
+              <p class="steps_list_item_status"></p>
+            </li>
+            <li class="steps_list_item mb-2">
+              <p class="steps_list_item_id">2</p>
+              <p class="steps_list_item_heading">Employment & Income</p>
+              <p class="steps_list_item_status"></p>
+            </li>
+            <li class="steps_list_item">
+              <p class="steps_list_item_id">3</p>
+              <p class="steps_list_item_heading">Adverse events</p>
+              <button class="btn_primary" id="profile_step_btn">
+                <span>Get Started</span>
+                <span>
+                  <svg
+                    version="1.0"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="20.000000pt"
+                    height="20.000000pt"
+                    viewBox="0 0 128.000000 128.000000"
+                    preserveAspectRatio="xMidYMid meet"
+                  >
+                    <g
+                      id="right_arrow"
+                      transform="translate(0.000000,128.000000) scale(0.100000,-0.100000)"
+                      fill="#000000"
+                      stroke="none"
+                    >
+                      <path
+                        d="M679 1131 c-30 -29 -39 -47 -39 -72 0 -28 17 -50 142 -176 l142 -143
                -440 0 -441 0 -21 -23 c-33 -35 -31 -119 3 -152 l24 -25 438 0 437 0 -142
                -143 c-125 -126 -142 -148 -142 -176 0 -25 9 -43 39 -72 69 -69 63 -72 349
-               214 190 190 252 259 252 277 0 18 -62 87 -252 277 -286 286 -280 283 -349 214z" />
-                  </g>
-                </svg>
-              </span>
-            </button>
+               214 190 190 252 259 252 277 0 18 -62 87 -252 277 -286 286 -280 283 -349 214z"
+                      />
+                    </g>
+                  </svg>
+                </span>
+              </button>
+            </li>
+          </ul>
+          <div class="submit_button_set">
+            <button class="btn_gray" id="steps_sec_back">Back</button>
+          </div>
+        </section>
+
+        <!-- application -->
+        <section class="application page hide" id="application">
+          <div class="application_wrap">
+            <div class="submit_button_set">
+              <button class="btn_gray" id="application_sec_back">Back</button>
+            </div>
+            <h1 class="application_wrap_heading mb-5" id="volunteer"></h1>
+            <div class="application_wrap_list">
+              <div class="card">
+                <div class="card_shape">
+                  <div class="card_shape_text">60%</div>
+                  <div class="card_shape_outline"></div>
+                </div>
+                <div class="card_detail">
+                  <h3 class="card_detail_heading mb-2">My first home</h3>
+                  <p class="card_detail_desc mb-2">
+                    Great start! You are so close to buying your dream house
+                  </p>
+                  <button class="btn_primary" id="">
+                    <span>Complete Application</span>
+                    <span>
+                      <svg
+                        version="1.0"
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="20.000000pt"
+                        height="20.000000pt"
+                        viewBox="0 0 128.000000 128.000000"
+                        preserveAspectRatio="xMidYMid meet"
+                      >
+                        <use href="#right_arrow" />
+                      </svg>
+                    </span>
+                  </button>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card_detail">
+                  <h3 class="card_detail_heading mb-2">New application?</h3>
+                  <p class="card_detail_desc mb-2">
+                    Looking for buy or rent? Get started with an idae how much
+                    you can afford
+                  </p>
+                  <button class="btn_muted disabled" id="">
+                    <span>Get Started</span>
+                    <span>
+                      <svg
+                        version="1.0"
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="20.000000pt"
+                        height="20.000000pt"
+                        viewBox="0 0 128.000000 128.000000"
+                        preserveAspectRatio="xMidYMid meet"
+                      >
+                        <use href="#right_arrow" />
+                      </svg>
+                    </span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </section>
+    </main>
+    <!-- Footer -->
+    <footer>
+      <section class="footer">
+        <ul class="container footer_wrapper">
+          <li class="footer_social">
+            <p class="footer_social_text mb-1">Schedule a conversation</p>
+            <p class="footer_social_text mb-3">
+              <a href="mailto:hello@fairrate.com">hello@fairrate.com</a>
+            </p>
+            <p class="footer_social_text mb-2">
+              <a href="tel:+622025550117">+62 202 555 0117</a>
+            </p>
+            <div class="footer_social_icons">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="33"
+                height="33"
+                viewBox="0 0 33 33"
+              >
+                <path
+                  fill="#6B7C93"
+                  fill-rule="evenodd"
+                  d="M0 16.5C0 7.387 7.387 0 16.5 0S33 7.387 33 16.5 25.613 33 16.5 33 0 25.613 0 16.5zM17.32 26v-9.001h2.366L20 13.897h-2.68l.004-1.552c0-.81.073-1.243 1.18-1.243h1.48V8h-2.368c-2.843 0-3.844 1.505-3.844 4.035v1.862H12V17h1.772V26h3.548z"
+                />
+              </svg>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="33"
+                height="33"
+                viewBox="0 0 33 33"
+              >
+                <path
+                  fill="#6B7C93"
+                  fill-rule="evenodd"
+                  d="M0 16.5C0 7.387 7.387 0 16.5 0S33 7.387 33 16.5 25.613 33 16.5 33 0 25.613 0 16.5zm25 1.337c0-3.3-1.616-4.837-3.771-4.837-1.74 0-2.517 1.045-2.953 1.775v.036h-.021l.021-.036v-1.523H15C15.044 14.261 15 24 15 24h3.276v-6.003c0-.322.022-.64.109-.87.237-.643.775-1.307 1.68-1.307 1.186 0 1.66.986 1.66 2.43V24H25v-6.163zM11.012 8C9.796 8 9 8.864 9 10c0 1.11.773 2 1.966 2h.023c1.24 0 2.011-.89 2.011-2-.024-1.136-.771-2-1.988-2zM9 23h3V13H9v10z"
+                />
+              </svg>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="33"
+                height="33"
+                viewBox="0 0 33 33"
+              >
+                <path
+                  fill="#6B7C93"
+                  fill-rule="evenodd"
+                  d="M0 16.5C0 7.387 7.387 0 16.5 0S33 7.387 33 16.5 25.613 33 16.5 33 0 25.613 0 16.5zm26-5.725a7.23 7.23 0 0 1-2.12.596 3.788 3.788 0 0 0 1.623-2.094 7.331 7.331 0 0 1-2.347.92A3.64 3.64 0 0 0 20.461 9c-2.039 0-3.692 1.696-3.692 3.787 0 .297.032.586.095.863-3.068-.158-5.789-1.666-7.61-3.958-.318.559-.5 1.21-.5 1.904 0 1.315.653 2.474 1.643 3.153a3.622 3.622 0 0 1-1.673-.476v.048c0 1.835 1.274 3.366 2.962 3.714-.31.086-.636.133-.973.133-.238 0-.47-.024-.695-.07.47 1.505 1.833 2.6 3.448 2.63A7.29 7.29 0 0 1 8 22.297 10.247 10.247 0 0 0 13.66 24c6.793 0 10.505-5.772 10.505-10.778l-.012-.49A7.481 7.481 0 0 0 26 10.775z"
+                />
+              </svg>
+            </div>
+            <p class="footer_social_text">
+              © 2018 Deivas.io, Inc. All rights reserved.
+            </p>
+          </li>
+          <li class="footer_menus">
+            <h3>Company</h3>
+            <a href="https://www.google.com/">Resources</a>
+            <a href="https://www.google.com/">Careers</a>
+          </li>
+          <li class="footer_menus">
+            <h3>LEGAL</h3>
+            <a href="https://www.google.com/">NMLS Consumer Access</a>
+            <a href="https://www.google.com/">Privacy Policy</a>
+            <a href="https://www.google.com/">Terms of Use</a>
+            <a href="https://www.google.com/">Disclosures & Licensing</a>
+          </li>
+          <li class="footer_des">
+            <a href="/">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="150"
+                height="39"
+                viewBox="0 0 185 39"
+              >
+                <use href="#logo" />
+              </svg>
+            </a>
+            <p class="footer_des_text">
+              Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum
+              nibh, ut fermentum massa justo sit amet risus. Praesent commodo
+              cursus magna.
+            </p>
           </li>
         </ul>
-        <div class="submit_button_set">
-          <button class="btn_gray" id="steps_sec_back">Back</button>
-        </div>
       </section>
-
-      <!-- application -->
-      <section class="application page hide" id="application">
-        <div class="application_wrap">
-          <div class="submit_button_set">
-            <button class="btn_gray" id="application_sec_back">Back</button>
-          </div>
-          <h1 class="application_wrap_heading mb-5" id="volunteer"></h1>
-          <div class="application_wrap_list">
-            <div class="card">
-              <div class="card_shape">
-                <div class="card_shape_text">60%</div>
-                <div class="card_shape_outline"></div>
-              </div>
-              <div class="card_detail">
-                <h3 class="card_detail_heading mb-2">My first home</h3>
-                <p class="card_detail_desc mb-2">
-                  Great start! You are so close to buying your dream house
-                </p>
-                <button class="btn_primary" id="">
-                  <span>Complete Application</span>
-                  <span>
-                    <svg version="1.0" xmlns="http://www.w3.org/2000/svg" width="20.000000pt" height="20.000000pt"
-                      viewBox="0 0 128.000000 128.000000" preserveAspectRatio="xMidYMid meet">
-                      <use href="#right_arrow" />
-                    </svg>
-                  </span>
-                </button>
-              </div>
-            </div>
-            <div class="card">
-              <div class="card_detail">
-                <h3 class="card_detail_heading mb-2">New application?</h3>
-                <p class="card_detail_desc mb-2">
-                  Looking for buy or rent? Get started with an idae how much
-                  you can afford
-                </p>
-                <button class="btn_muted disabled" id="">
-                  <span>Get Started</span>
-                  <span>
-                    <svg version="1.0" xmlns="http://www.w3.org/2000/svg" width="20.000000pt" height="20.000000pt"
-                      viewBox="0 0 128.000000 128.000000" preserveAspectRatio="xMidYMid meet">
-                      <use href="#right_arrow" />
-                    </svg>
-                  </span>
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-    </div>
-  </main>
-  <!-- Footer -->
-  <footer>
-    <section class="footer">
-      <ul class="container footer_wrapper">
-        <li class="footer_social">
-          <p class="footer_social_text mb-1">Schedule a conversation</p>
-          <p class="footer_social_text mb-3">
-            <a href="mailto:hello@fairrate.com">hello@fairrate.com</a>
-          </p>
-          <p class="footer_social_text mb-2">
-            <a href="tel:+622025550117">+62 202 555 0117</a>
-          </p>
-          <div class="footer_social_icons">
-            <svg xmlns="http://www.w3.org/2000/svg" width="33" height="33" viewBox="0 0 33 33">
-              <path fill="#6B7C93" fill-rule="evenodd"
-                d="M0 16.5C0 7.387 7.387 0 16.5 0S33 7.387 33 16.5 25.613 33 16.5 33 0 25.613 0 16.5zM17.32 26v-9.001h2.366L20 13.897h-2.68l.004-1.552c0-.81.073-1.243 1.18-1.243h1.48V8h-2.368c-2.843 0-3.844 1.505-3.844 4.035v1.862H12V17h1.772V26h3.548z" />
-            </svg>
-            <svg xmlns="http://www.w3.org/2000/svg" width="33" height="33" viewBox="0 0 33 33">
-              <path fill="#6B7C93" fill-rule="evenodd"
-                d="M0 16.5C0 7.387 7.387 0 16.5 0S33 7.387 33 16.5 25.613 33 16.5 33 0 25.613 0 16.5zm25 1.337c0-3.3-1.616-4.837-3.771-4.837-1.74 0-2.517 1.045-2.953 1.775v.036h-.021l.021-.036v-1.523H15C15.044 14.261 15 24 15 24h3.276v-6.003c0-.322.022-.64.109-.87.237-.643.775-1.307 1.68-1.307 1.186 0 1.66.986 1.66 2.43V24H25v-6.163zM11.012 8C9.796 8 9 8.864 9 10c0 1.11.773 2 1.966 2h.023c1.24 0 2.011-.89 2.011-2-.024-1.136-.771-2-1.988-2zM9 23h3V13H9v10z" />
-            </svg>
-            <svg xmlns="http://www.w3.org/2000/svg" width="33" height="33" viewBox="0 0 33 33">
-              <path fill="#6B7C93" fill-rule="evenodd"
-                d="M0 16.5C0 7.387 7.387 0 16.5 0S33 7.387 33 16.5 25.613 33 16.5 33 0 25.613 0 16.5zm26-5.725a7.23 7.23 0 0 1-2.12.596 3.788 3.788 0 0 0 1.623-2.094 7.331 7.331 0 0 1-2.347.92A3.64 3.64 0 0 0 20.461 9c-2.039 0-3.692 1.696-3.692 3.787 0 .297.032.586.095.863-3.068-.158-5.789-1.666-7.61-3.958-.318.559-.5 1.21-.5 1.904 0 1.315.653 2.474 1.643 3.153a3.622 3.622 0 0 1-1.673-.476v.048c0 1.835 1.274 3.366 2.962 3.714-.31.086-.636.133-.973.133-.238 0-.47-.024-.695-.07.47 1.505 1.833 2.6 3.448 2.63A7.29 7.29 0 0 1 8 22.297 10.247 10.247 0 0 0 13.66 24c6.793 0 10.505-5.772 10.505-10.778l-.012-.49A7.481 7.481 0 0 0 26 10.775z" />
-            </svg>
-          </div>
-          <p class="footer_social_text">
-            © 2018 Deivas.io, Inc. All rights reserved.
-          </p>
-        </li>
-        <li class="footer_menus">
-          <h3>Company</h3>
-          <a href="https://www.google.com/">Resources</a>
-          <a href="https://www.google.com/">Careers</a>
-        </li>
-        <li class="footer_menus">
-          <h3>LEGAL</h3>
-          <a href="https://www.google.com/">NMLS Consumer Access</a>
-          <a href="https://www.google.com/">Privacy Policy</a>
-          <a href="https://www.google.com/">Terms of Use</a>
-          <a href="https://www.google.com/">Disclosures & Licensing</a>
-        </li>
-        <li class="footer_des">
-          <a href="/">
-            <svg xmlns="http://www.w3.org/2000/svg" width="150" height="39" viewBox="0 0 185 39">
-              <use href="#logo" />
-            </svg>
-          </a>
-          <p class="footer_des_text">
-            Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum
-            nibh, ut fermentum massa justo sit amet risus. Praesent commodo
-            cursus magna.
-          </p>
-        </li>
-      </ul>
-    </section>
-  </footer>
-</body>
-
+    </footer>
+  </body>
 </html>
