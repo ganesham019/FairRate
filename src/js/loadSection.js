@@ -39,54 +39,40 @@ const rateTenCheckbox = document.getElementById('rateten');
 const rateSevenCheckbox = document.getElementById('rateseven');
 const rateFiveCheckbox = document.getElementById('ratefive');
 
-const loadPage = (currentStatus,currentUserDetail) => {
+const loadPage = (currentStatus, currentUserDetail) => {
+    // first get all section 
+    const getAllSection = document.querySelectorAll('.page');
+    // using forEach check and add the hide class for all  
+    getAllSection.forEach((item) => {
+        if (!item.classList.contains('hide')) {
+            item.classList.add('hide');
+        }
+    });
+    // if current page is 2 remove the hide class only the second section
     switch (currentStatus) {
         case 1:
             // userdetails
             userSection.classList.remove('hide');
-            personalSection.classList.add('hide');
-            getDocumentSection.classList.add('hide');
-            getBrandSection.classList.add('hide');
-            getStepsSection.classList.add('hide');
-            getRateSection.classList.add('hide');
-            getApplySection.classList.add('hide');
             break;
         case 2:
             // personal details
-            userSection.classList.add('hide');
             personalSection.classList.remove('hide');
-            getDocumentSection.classList.add('hide');
-            getBrandSection.classList.add('hide');
             getFileErr.innerText = "";
             getFileErr.classList.remove('active');
-            getStepsSection.classList.add('hide');
-            getRateSection.classList.add('hide');
-            getApplySection.classList.add('hide');
             break;
         case 3:
             // document upload
-            userSection.classList.add('hide');
-            personalSection.classList.add('hide');
             getDocumentSection.classList.remove('hide');
-            getBrandSection.classList.add('hide');
-            getRateSection.classList.add('hide');
-            getStepsSection.classList.add('hide');
-            getApplySection.classList.add('hide');
             break;
         case 4:
             // fetch data from json
-            userSection.classList.add('hide');
-            personalSection.classList.add('hide');
-            getDocumentSection.classList.add('hide');
             getBrandSection.classList.remove('hide');
-            getRateSection.classList.add('hide');
-            getStepsSection.classList.add('hide');
-            getApplySection.classList.add('hide');
             //    show data from array of object
             showData();
             break;
         case 5:
             // load all the checkbox true
+            getRateSection.classList.remove('hide');
             fixedCheck.checked = true;
             adjustableCheck.checked = true;
             fifteenYearCheckbox.checked = true;
@@ -95,34 +81,14 @@ const loadPage = (currentStatus,currentUserDetail) => {
             rateTenCheckbox.checked = true;
             rateSevenCheckbox.checked = true;
             rateFiveCheckbox.checked = true;
-            userSection.classList.add('hide');
-            personalSection.classList.add('hide');
-            getDocumentSection.classList.add('hide');
-            getBrandSection.classList.add('hide');
-            getRateSection.classList.remove('hide');
-            getStepsSection.classList.add('hide');
-            getApplySection.classList.add('hide');
-
             var time = new Date();
             currentTime.innerText = "Rates and fees as of" + " " + time.toLocaleString('en-US', { hour: 'numeric', minute: 'numeric', hour12: true })
             break;
         case 6:
-            userSection.classList.add('hide');
-            personalSection.classList.add('hide');
-            getDocumentSection.classList.add('hide');
-            getBrandSection.classList.add('hide');
-            getRateSection.classList.add('hide');
             getStepsSection.classList.remove('hide');
-            getApplySection.classList.add('hide');
             break;
         case 7:
             volunteer.innerText = "Good Day - " + currentUserDetail.firstname + " " + currentUserDetail.lastname;
-            userSection.classList.add('hide');
-            personalSection.classList.add('hide');
-            getDocumentSection.classList.add('hide');
-            getBrandSection.classList.add('hide');
-            getRateSection.classList.add('hide');
-            getStepsSection.classList.add('hide');
             getApplySection.classList.remove('hide');
             break;
         default:
@@ -134,7 +100,6 @@ const loadPage = (currentStatus,currentUserDetail) => {
 
 // load section every refresh
 export const loadSection = () => {
-    debugger;
     // scroll to top
     document.body.scrollTop = 0;
     document.documentElement.scrollTop = 0;
@@ -183,5 +148,5 @@ export const loadSection = () => {
             fireParentElement.classList.add('active');
         }
     }
-    loadPage(currentStatus,currentUserDetail);
+    loadPage(currentStatus, currentUserDetail);
 }

@@ -1,3 +1,4 @@
+import { loadFileList } from "./fileUpload";
 import { loadSection } from "./loadSection";
 
 // parent chekcbox
@@ -65,7 +66,6 @@ getStepsSecBackBtn.addEventListener('click', (e) => {
     tenPercent.classList.remove('hide');
     loadSection();
 });
-
 monthRange.addEventListener('input', () => {
     fairMonthRange.innerText = monthRange.value;
     if (fairMonthRange.innerText >= 3000 && fairMonthRange.innerText <= 3120) {
@@ -137,7 +137,6 @@ pointsRange.addEventListener('input', () => {
         thirtyYear.classList.add('hide');
     }
 });
-
 adjustableCheck.addEventListener('change', () => {
     if (adjustableCheck.checked) {
         rateTenCheckbox.checked = true;
@@ -238,7 +237,6 @@ rateFiveCheckbox.addEventListener('change', () => {
         fivePercent.classList.add('hide');
     }
 });
-
 // document menus
 getDocumentPhotoBtn.addEventListener('click', (e) => {
     e.preventDefault();
@@ -265,7 +263,6 @@ getLogoHomeNav.addEventListener('click', (e) => {
     localStorage.setItem("currentPage", 1);
     loadSection();
 });
-
 personalBackButton.addEventListener('click', (e) => {
     e.preventDefault();
     localStorage.setItem("currentPage", 1);
@@ -292,7 +289,6 @@ getApplySecBackBtn.addEventListener('click', (e) => {
     loadSection();
 });
 getHomeNav.addEventListener('click', (e) => {
-    debugger;
     e.preventDefault();
     localStorage.setItem("currentPage", 1);
     loadSection();
