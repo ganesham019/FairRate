@@ -1,3 +1,5 @@
+import { loadSection } from "./loadSection";
+
 // parent chekcbox
 const adjustableCheck = document.getElementById('adjustable');
 const fixedCheck = document.getElementById('fixed');
@@ -263,6 +265,7 @@ getLogoHomeNav.addEventListener('click', (e) => {
     localStorage.setItem("currentPage", 1);
     loadSection();
 });
+
 personalBackButton.addEventListener('click', (e) => {
     e.preventDefault();
     localStorage.setItem("currentPage", 1);
@@ -289,6 +292,7 @@ getApplySecBackBtn.addEventListener('click', (e) => {
     loadSection();
 });
 getHomeNav.addEventListener('click', (e) => {
+    debugger;
     e.preventDefault();
     localStorage.setItem("currentPage", 1);
     loadSection();

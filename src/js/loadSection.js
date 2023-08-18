@@ -134,6 +134,7 @@ const loadPage = (currentStatus,currentUserDetail) => {
 
 // load section every refresh
 export const loadSection = () => {
+    debugger;
     // scroll to top
     document.body.scrollTop = 0;
     document.documentElement.scrollTop = 0;

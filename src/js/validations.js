@@ -1,3 +1,5 @@
+import { loadSection } from "./loadSection";
+
 let userDataList = {};
 let personalDataList = {};
 
@@ -121,11 +123,9 @@ export const personalValidate = () => {
 }
 
 getDocumentNav.addEventListener('click', (e) => {
-       if(verifiedAddress && verifiedEmail && verifiedDate && catergoryVerified && verfiedSelect){
         e.preventDefault();
         localStorage.setItem("currentPage", 3);
         loadSection();
-       }
 });
 
 // click event for submit

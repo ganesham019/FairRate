@@ -3,7 +3,7 @@ import flatpickr from "flatpickr";
 import { personalValidate, validate } from "./validations";
 import { uploadFile, loadFileList } from "./fileUpload";
 import { loadSection } from "./loadSection";
-import './domManipulations';
+import '../js/domManipulations';
 document.addEventListener('DOMContentLoaded', () => {
     const getProfileMenu = document.getElementById('nav_profile_user');
     // select menu
